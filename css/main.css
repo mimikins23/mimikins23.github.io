@@ -1,0 +1,622 @@
+.clearfix:after {
+  content:" ";
+  display:table;
+  clear: both;
+}
+
+/*getting rid of the horizontal scrolling*/
+
+html {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+#container {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+div #recipes .clearfix {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+div .row .clearfix {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+div .row {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+header {
+  font-family: 'Montserrat';
+  letter-spacing: 1.5em;
+  z-index: 10000;
+  padding: 0.5%;
+  padding-left: 2%;
+  /*padding-left: 4%;*/
+  position: absolute;
+  color: #1d58ff;
+  background-color: #fff;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+body {
+  /* position: relative; */
+  margin: 0;
+  max-width: 100%;
+
+}
+
+/*takes blue highlight away from the images*/
+img.size {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img.size::-moz-selection { background:transparent; }
+img.size::selection { background:transparent; }
+
+/*takes blue highlight away form the button*/
+#submitAPI:focus {
+  outline: none;
+}
+
+#back:focus {
+  outline: none;
+}
+
+/*takes away the visibility of the scrollbar on the sides*/
+#container::-webkit-scrollbar { 
+    display: none; 
+}
+
+#container::-moz-user-scrollbar { 
+    display: none; 
+}
+
+
+html::-webkit-scrollbar { 
+    display: none; 
+}
+
+html::-moz-user-scrollbar { 
+    display: none; 
+}
+
+#ingredients::-webkit-scrollbar { 
+    display: none; 
+}
+
+#ingredients::-webkit-scrollbar { 
+    display: none; 
+}
+
+#ingredients::-moz-user-scrollbar { 
+    display: none; 
+}
+
+#submitAPI:hover {
+  color: white;
+  border: 4px solid #1d58ff;
+  background-color: #1d58ff;
+}
+
+#back:hover {
+  color: #fff;
+}
+
+#submitAPI {
+  width: 12%;
+  margin-left: 45%;
+  /*float:left;*/
+  top: 38%;
+  position: absolute;
+  background-color: #f2d1d4;
+  border: 4px solid #f2d1d4;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px;
+  letter-spacing: 3px;
+  /*background-color: transparent;*/
+  z-index: 1000;
+
+}
+
+#back {
+  background-color: #fcd9d9;
+  top: 50%;
+  width: 100%;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: black;
+  padding: 10px;
+  border: 0px;
+
+}
+
+
+/*recipe section*/
+
+.x {
+width: 4%;
+position: absolute;
+margin-left: 100%;
+}
+
+
+#recipes2 {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  position: fixed;
+  top: 24%;
+  background-color: transparent;
+  z-index: 5000;
+ /* overflow: scroll;*/
+}
+
+#recipes {
+  width: 100%;
+  height: 400px;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+  margin-bottom: 10%;
+/*  background-color: white;
+*/  /*bottom: 0px;*/
+/*  top: 80%;*/
+  /*float: left;*/
+  background-color: #fff;
+  position: relative;
+  float: left;
+
+
+}
+
+#filler {
+  /*border: 3px solid black;*/
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 1em;
+  margin: 0;
+  padding: 2%;
+  color: black;
+  cursor: default;
+  /*height: 7%;*/
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: transparent;
+}
+
+#recipename {
+  border: 3px solid #fcd9d9;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%;
+  color: black;
+  background-color: #fff;
+  cursor: default;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#preptime {
+  border-left: 3px solid #fcd9d9;
+  border-right: 3px solid #fcd9d9;
+  border-bottom: 3px solid #fcd9d9;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5vw;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%; 
+  color: black;
+  background-color: #fff;
+  cursor: default;
+  width: 50%;
+  float: left;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  white-space: nowrap;
+}
+
+#rating {
+  border-right: 3px solid #fcd9d9;
+  border-bottom: 3px solid #fcd9d9;
+  margin-bottom: 40%;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5vw;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%;
+  color: black;
+  background-color: #fff;
+  cursor: default;
+  width: 50%;
+  float: left;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#ingredientstitle {
+  border-left: 3px solid #fcd9d9;
+  border-right: 3px solid #fcd9d9;
+  border-bottom: 3px solid #fcd9d9;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  background-color: #fff;
+  margin: 0;
+  padding: 1%;
+  padding-top: 1%;
+  padding-left: 6.5%;
+  color: black;
+  cursor: default;
+  clear: both;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+#ingredients {
+  border-left: 3px solid #fcd9d9;
+  border-right: 3px solid #fcd9d9;
+  border-bottom: 3px solid #fcd9d9;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  max-height: 150px;
+  margin: 0;
+  padding: 2%;
+  background-color: #fff;
+  /*padding-left: 6.5%;*/
+  color: black;
+  cursor: default;
+  padding-left: 3%;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: scroll;
+}
+
+li {
+  padding-left: 4%;
+}
+
+
+#directions {
+  border-left: 3px solid #fcd9d9;
+  border-right: 3px solid #fcd9d9;
+  border-bottom: 3px solid #fcd9d9;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%;
+  color: black;
+  background-color: #fff;
+  cursor: default;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+/*#noscroll {
+  overflow: hidden;
+}*/
+
+#container {
+  position: absolute;
+  width: 100%;
+  height: 1600px;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+
+
+  /*padding: 20px;*/
+}
+
+
+
+#svg {
+  position: absolute;
+  width: 90%;
+}
+
+#myLine {
+  stroke: #fca4e9;
+  stroke-width: 5px;
+}
+
+#myLine2 {
+  stroke: #f9b57d;
+  stroke-width: 5px;
+}
+
+#myLine3 {
+  stroke: #f9eb6b;
+  stroke-width: 5px;
+}
+
+#myLine4 {
+  stroke: #87f4a8;
+  stroke-width: 5px;
+}
+
+#myLine5 {
+  stroke: #97efe7;
+  stroke-width: 5px;
+}
+
+#myLine6 {
+  stroke: #f7a4a4;
+  stroke-width: 5px;
+}
+
+#myLine7 {
+  stroke: #92f4ba;
+  stroke-width: 5px;
+}
+
+#myLine8 {
+  stroke: #a2c3f9;
+  stroke-width: 5px;
+}
+
+
+
+#grid {
+ /* background: red;*/
+  top: 0;
+
+}
+
+#grid img {
+  height:100%;
+  width:100%;
+
+}
+
+
+
+#marble {
+/*  background: blue;*/
+  top: 0px;
+  background: url('../img/marble9.jpg') no-repeat center center fixed;
+   -webkit-background-size: cover;
+      -moz-background-size: cover;
+        -o-background-size: cover;
+           background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  padding: 0;
+  margin: 0;
+
+}
+
+/*this is the sizing for the fruit to make it responsive to size*/
+.size {
+  /*height: 60%;*/
+  width: 100%;
+}
+
+
+
+#watermelon {
+  top: 200px;
+  left: 13%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+  float: left;
+
+}
+
+
+
+#banana {
+  top: 200px;
+  left: 33%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#apple {
+  top: 200px;
+  left: 52%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#orange {
+  top: 200px;
+  left: 72.5%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#strawberry {
+  top: 390px;
+  left: 13%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#mango {
+  top: 390px;
+  left: 33%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#pineapple {
+  top: 390px;
+  left: 52%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#peach {
+  top: 390px;
+  left: 72.5%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#dot1 {
+  top: 190px;
+  left: 46.3%;
+  background: #f2d1d4;
+}
+
+#dot2 {
+  top: 280px;
+  left: 32.8%;
+  background: #f2d1d4;
+}
+
+#dot3 {
+  top: 380px;
+  left: 6.1%;
+  background: #f2d1d4;
+}
+
+#dot4 {
+  top: 380px;
+  left: 72.8%;
+  background: #f2d1d4;
+}
+
+#dot5 {
+  top: 570px;
+  left: 66%;
+  background: #f2d1d4;
+}
+
+#dot6 {
+  top: 90px;
+  left: 79.5%;
+  background: #f2d1d4;
+}
+
+#dot7 {
+  top: 476px;
+  left: 92.7%;
+  background: #f2d1d4;
+}
+
+#dot8 {
+  top: 668px;
+  left: 26.2%;
+  background: #f2d1d4;
+}
+
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  position: fixed;
+}
+
+#empty {
+  height: 16000px;
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+
+
+@media all and (max-width:1300px) {
+ #preptime {
+  font-size: 1em;
+  }
+ #rating {
+  font-size: 1em;
+ } 
+}
+
+@media all and (max-height:100px) {
+ #directions {
+  font-size: 0.8em;
+  }
+
+@media all and (max-width:900px) {
+ #directions {
+  font-size: 0.5em;
+  }
+
+
+
