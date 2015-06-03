@@ -1,0 +1,301 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+@font-face {
+    font-family: jaapokki;
+    src: url(font/Jaapokki.ttf);
+}
+
+@font-face {
+    font-family: chrome;
+    src: url(font/Chrome-normal.ttf);
+}
+
+@font-face {
+    font-family: bigjohn;
+    src: url(font/BIGJOHN.otf);
+}
+
+@font-face {
+    font-family: brandonbold;
+    src: url(font/brandonbold.ttf);
+}
+
+body {
+	background: white;
+
+}
+
+/* Content style */
+
+
+
+/* Header styles and animations */
+
+.ha-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	z-index: 50;
+	font-family: 'Montserrat', 'Jaapokki', "Lato", sans-serif;
+	font-weight: 700;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.ha-header-perspective {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-perspective: 1100px;
+	-moz-perspective: 1100px;
+	perspective: 1100px;
+	-webkit-perspective-origin: 50% 0;
+	-moz-perspective-origin: 50% 0;
+	perspective-origin: 50% 0;
+}
+
+/*header colour*/
+.ha-header-perspective > div {
+	background: #71fff4;
+	text-align: left;
+	padding: 0 7%;
+	height: 50%;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	text-align: justify;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	overflow: hidden;
+}
+
+.ha-header-front {
+	z-index: 2;
+	/*border: 3px solid #c3f4f4;*/
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
+
+.ha-header-perspective .ha-header-bottom {
+	background: #c3f4f4;
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	z-index: 1;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transition: top 0.5s;
+	-moz-transition: top 0.5s;
+	transition: top 0.5s;
+	position: absolute;
+	top: 0;
+}
+
+/* Justify inline-block elements (h1 on left side, nav on right) */
+.ha-header-perspective > div::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+/* Text styling */
+.ha-header h1,
+.ha-header h1::before,
+.ha-header h1 span,
+.ha-header nav,
+.ha-header nav::before {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+}
+
+/*.ha-header h1 {
+	font-weight: 300;
+	font-size: 2em;
+	letter-spacing: 10px;
+	margin: 0;
+	padding: 0 1em 0 0;
+	color: #fff;
+	cursor: default;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}*/
+
+.ha-header h1::before,
+.ha-header nav::before {
+	content: '';
+	height: 100%;
+}
+
+.ha-header h1::after {
+	content: '';
+	width: 100px;
+	height: 96px;
+	background: #fff;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	box-shadow: inset 0 8px #2d383f, inset 0 16px #fff, inset 0 24px #2d383f, inset 0 32px #fff, inset 0 40px #2d383f, inset 0 48px #fff, inset 0 56px #2d383f;
+	opacity: 0;
+	border: 20px solid #fff;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.ha-header h1:hover {
+	color: #fc8686;
+}
+
+.ha-header nav {
+	height: 100%;
+}
+
+.ha-header nav a {
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 700;
+    padding: 0.2em 0.4em;
+    padding-top: 0.5em;
+    margin: 0 0.4em 0;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: #FFF;
+    outline: none;
+    text-decoration: none;
+}
+
+.ha-header nav a:hover {
+	color: #fc8686;
+}
+
+.ha-header nav a:last-child {
+    margin-right: 0;
+}
+
+.ha-header .ha-header-front nav a:first-child,
+.ha-header .ha-header-front nav a:last-child {
+	border: 2px solid #fff;
+}
+
+.ha-header .ha-header-front nav a:first-child:hover,
+.ha-header .ha-header-front nav a:last-child:hover {
+	border: 2px solid #fc8686;
+}
+
+/* Individual states */
+
+
+/*important*/
+.ha-header-show {
+	height: 220px;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+/*important*/
+.ha-header-show .ha-header-bottom {
+	opacity: 0;
+	-webkit-transition: top 0.5s, opacity 0s 0.5s;
+	-moz-transition: top 0.5s, opacity 0s 0.5s;
+	transition: top 0.5s, opacity 0s 0.5s;
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	top: 0%;
+}
+/*important*/
+.ha-header-subshow {
+	height: 220px;
+}
+
+
+/*important*/
+.ha-header-shrink {
+	height: 220px;
+	top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+
+/*important*/
+.ha-header-rotateBack {
+	height: 220px;
+	top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 65em) {
+	body {
+		font-size: 85%;
+	}
+}
+
+@media screen and (max-width: 60em) {
+
+
+	.ha-header-perspective > div,
+	.ha-header nav {
+		text-align: center;
+	}
+
+	.ha-header h1 {
+		padding: 10px 0;
+		height: 60%;
+	}
+
+	.ha-header .ha-header-bottom nav {
+		padding: 40px 0px;
+	}
+
+	.ha-header nav {
+		display: block;
+		height: auto;
+	}
+
+}
+
+@media screen and (max-width: 38em) {
+	section {
+		font-size: 1.3em;
+	}
+
+	.ha-header h1 {
+		font-size: 2em;
+	}
+
+	.ha-header nav {
+		font-size: 60%;
+	}
+}
+
