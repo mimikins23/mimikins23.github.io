@@ -150,7 +150,7 @@ var docWidth = document.documentElement.offsetWidth;
 		top: -scrollTop*0.6 + 668
 		});
 
-	if ((scrollTop-$(window).scrollTop())>800) {
+	if ((scrollTop-$(window).scrollTop())>700) {
 		$(".circle").stop().fadeTo(100,0);
 	} else {
 		$(".circle").stop().fadeTo('fast',10);
