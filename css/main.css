@@ -635,7 +635,7 @@ li {
     and (-webkit-min-device-pixel-ratio : 2)
 { 
   #grid img {
-  width: 667px;
+  width: 100%;
 }
   
 }
