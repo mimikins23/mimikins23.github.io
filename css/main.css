@@ -435,6 +435,9 @@ li {
 
 }
 
+#mobile-grid {
+  display: none;
+}
 
 
 #marble {
@@ -601,6 +604,8 @@ li {
 
 
 
+
+
 @media all and (max-width:1300px) {
  #preptime {
   font-size: 1em;
@@ -659,7 +664,7 @@ li {
       
     }
     #container {
-     background: url('../img/LongGrid-Mobile.png') no-repeat center center fixed;
+     
          }
     #mobile {
   display: block;
@@ -678,20 +683,23 @@ li {
       margin-left: 40%;
       top: 25%;
     }
-    #grid img {
-    height:100%;
-    width:100%;
-    z-index: 9000;
+   
+   #desktop-grid {
     display: none;
-    
+   }
+
+    #mobile-grid {
+    display: block;
+    height: 100%;
+    width: 100%;
     }
 
-    #grid {
-      height: 100%;
-      width: 100%;
+    #empty {
+  max-height: 736px;
+  overflow-x: hidden; 
+  max-width: 100%;
+}
 
-      
-    }
     #recipes {
       display: none;
     }
