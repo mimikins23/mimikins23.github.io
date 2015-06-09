@@ -658,14 +658,12 @@ li {
 /*optimizing for mobile sizing
 */
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
-    #body {
+  /*  #body {
       overflow: hidden;
       width: 100%;
       
-    }
-    #container {
-     
-         }
+    }*/
+    
     #mobile {
   display: block;
   margin-left: 17%;
@@ -696,11 +694,11 @@ li {
     position: fixed;
     }
 
-    #empty {
+  /*  #empty {
   max-height: 736px;
   overflow-x: hidden; 
   max-width: 100%;
-}
+}*/
 
     #recipes {
       display: none;
@@ -739,7 +737,7 @@ li {
 }
 
 #recipename {
-  border: 3px solid #fcd9d9;
+  border: 2px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -759,9 +757,9 @@ li {
 }
 
 #preptime {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 2px solid #fcd9d9;
+  border-right: 2px solid #fcd9d9;
+  border-bottom: 2px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -784,8 +782,8 @@ li {
 }
 
 #rating {
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-right: 2px solid #fcd9d9;
+  border-bottom: 2px solid #fcd9d9;
   margin-bottom: 40%;
   font-family: 'Montserrat';
   text-transform: uppercase;
@@ -810,9 +808,9 @@ li {
 }
 
 #ingredientstitle {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 2px solid #fcd9d9;
+  border-right: 2px solid #fcd9d9;
+  border-bottom: 2px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -835,9 +833,9 @@ li {
 
 
 #ingredients {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 2px solid #fcd9d9;
+  border-right: 2px solid #fcd9d9;
+  border-bottom: 2px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -867,9 +865,9 @@ li {
 
 
 #directions {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 2px solid #fcd9d9;
+  border-right: 2px solid #fcd9d9;
+  border-bottom: 2px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -1006,7 +1004,7 @@ header {
 
 }
 
-html {
+/*html {
   overflow-x: hidden; 
   max-width: 100%;
 }
@@ -1033,5 +1031,5 @@ div .row {
 
 img {
   overflow-x: hidden; 
-}
+}*/
 }
