@@ -688,7 +688,7 @@ li {
     #grid {
       height: 100%;
       width: 100%;
-       background: url('../img/LongGrid-Mobile.png') no-repeat center center fixed;
+       background: url('/img/LongGrid-Mobile.png') no-repeat center center fixed;
     }
     #recipes {
       display: none;
