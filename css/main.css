@@ -684,13 +684,13 @@ li {
       top: 90%;
     }
     #grid img {
-    height:150%;
+    height:100%;
     width:100%;
     z-index: 9000;
     }
     #grid {
       height: 100%;
-      width: 250%;
+      width: 100%;
     }
     #recipes {
       display: none;
