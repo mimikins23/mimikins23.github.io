@@ -120,7 +120,7 @@ html::-moz-user-scrollbar {
   width: 12%;
   margin-left: 45%;
   /*float:left;*/
-  top: 38%;
+  top: 70%;
   position: absolute;
   background-color: #f2d1d4;
   border: 4px solid #f2d1d4;
@@ -170,22 +170,7 @@ margin-left: 100%;
  /* overflow: scroll;*/
 }
 
-#recipes {
-  width: 100%;
-  height: 400px;
-  margin-left: 3.5%;
-  margin-right: 3.5%;
-  margin-bottom: 10%;
-/*  background-color: white;
-*/  /*bottom: 0px;*/
-/*  top: 80%;*/
-  /*float: left;*/
-  background-color: #fff;
-  position: relative;
-  float: left;
 
-
-}
 
 #filler {
   /*border: 3px solid black;*/
@@ -369,8 +354,6 @@ li {
   top: 0;
   bottom: 0;
   overflow: hidden;
-
-  /*padding: 20px;*/
 }
 
 
@@ -431,7 +414,11 @@ li {
 #grid img {
   height:100%;
   width:100%;
+}
 
+#desktop-grid {
+  height: 100%;
+  width: 100%;
 }
 
 #mobile-grid {
@@ -629,10 +616,12 @@ li {
 /*resizes fruit so they are not overlapping when screen size changes
 */
 
-  @media all and (min-width:1500px) {
+@media all and (min-width:1200px) {
   #submitAPI {
-    top: 40%;
+    top: 80%;
   }
+
+ 
 
 }
 
@@ -650,8 +639,9 @@ li {
     top: 480px;
   }
   #submitAPI {
-    top: 50%;
+    top: 85%;
   }
+  
 }
 
 /*optimizing for mobile sizing
