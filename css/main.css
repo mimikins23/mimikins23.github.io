@@ -440,7 +440,7 @@ li {
 #marble {
 /*  background: blue;*/
   top: 0px;
-  background: url('/img/marble9.jpg') no-repeat center center fixed;
+  background: url('../img/marble9.jpg') no-repeat center center fixed;
    -webkit-background-size: cover;
       -moz-background-size: cover;
         -o-background-size: cover;
@@ -650,18 +650,13 @@ li {
   }
 }
 
-
-/*
-@media only screen 
-    and (max-device-width: 640px), 
-    only screen and (max-device-width: 667px), 
-    only screen and (max-width: 480px)
-{ }*/
-
+/*optimizing for mobile sizing
+*/
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
     #body {
       overflow: hidden;
       width: 100%;
+      max-height: 736px;
     }
     #container {
       height: 736px;
@@ -682,6 +677,7 @@ li {
       width: 25%;
       margin-left: 40%;
       top: 90%;
+
     }
     #grid img {
     height:100%;
@@ -697,13 +693,14 @@ li {
     }
 
     #recipes2 {
-  width: 100%;
+  width: 90%;
   margin-left: 0%;
-  margin-right: 20%;
+  margin-right: 0%;
   position: fixed;
-  top: 24%;
+  top: 30%;
   background-color: transparent;
-  z-index: 5000;
+  z-index: 10000;
+  height: 100%;
  /* overflow: scroll;*/
 }
 
@@ -805,7 +802,7 @@ li {
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.5em;
   letter-spacing: 0.2em;
   background-color: #fff;
   margin: 0;
@@ -847,6 +844,7 @@ li {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   overflow: scroll;
+  word-wrap: break-word
 }
 
 li {
@@ -877,7 +875,13 @@ li {
   transition: all 0.5s;
 }
 
-    header {
+.x {
+width: 10%;
+position: absolute;
+margin-left: 100%;
+}
+
+header {
   font-family: 'Montserrat';
   letter-spacing: 1.5em;
   z-index: 10000;
@@ -1012,13 +1016,8 @@ div .row {
   overflow-x: hidden; 
   max-width: 100%;
 }
+
+img {
+  overflow-x: hidden; 
 }
-
-
-  
-
-
-
-
-
-
+}
