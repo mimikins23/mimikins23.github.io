@@ -618,6 +618,12 @@ li {
   font-size: 0.5em;
   }
   
+@media all and (max-width: 1500px) {
+  #strawberry {
+    top: 450px;
+  }
+}
+  
 
 //stuff for mobile responsiveness 
 
@@ -637,7 +643,6 @@ li {
   #grid img {
   width: 100%;
 }
-  
 }
 
 
