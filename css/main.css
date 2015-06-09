@@ -617,6 +617,28 @@ li {
  #directions {
   font-size: 0.5em;
   }
+  
+
+//stuff for mobile responsiveness 
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ }
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+  #grid img {
+  width: 667px;
+}
+  
+}
 
 
 
