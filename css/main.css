@@ -618,14 +618,12 @@ li {
   font-size: 0.5em;
   }
   
-@media all and (min-width:1450px) {
+@media all and (min-width:1500px) {
   #strawberry {
     top: 600px;
   }
 }
   
-
-//stuff for mobile responsiveness 
 
 @media only screen 
     and (min-device-width : 375px) 
