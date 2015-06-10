@@ -2,6 +2,7 @@ $(function () {
 
 //code for javascript media queries
 var mq = window.matchMedia( "(min-width: 640px)" );
+var mb = window.matchMedia( "(max-width: 1610px)" );
 
 //code to tell me which part of the code is causing horiztonal scrolling
 var docWidth = document.documentElement.offsetWidth;
@@ -161,9 +162,11 @@ var docWidth = document.documentElement.offsetWidth;
 	}
 
 
+
+	if (mb.matches) { 
 	//scrolling fruits
 	//if statement including media queries
-	if (mq.matches) {
+			if (mq.matches) {
 
 			$("#watermelon").css({
 			top: -scrollTop*0.2 + 200
@@ -237,9 +240,45 @@ var docWidth = document.documentElement.offsetWidth;
 			top: +scrollTop*0.9 + 440
 			});
 
-
 	// window width is less than 640px
 		}
+		}  else {
+
+		$("#watermelon").css({
+			top: -scrollTop*0.6 + 220
+			});
+
+		$("#banana").css({
+			top: -scrollTop*0.6 + 220
+			});
+
+		$("#apple").css({
+			top: -scrollTop*0.92 + 220
+			});
+
+		$("#orange").css({
+			top: -scrollTop*1.5 + 220
+			});
+
+		$("#strawberry").css({
+			top: +scrollTop*0.8 + 450
+			});
+
+		$("#mango").css({
+			top: +scrollTop*1.35 + 450
+			});
+
+		$("#pineapple").css({
+			top: +scrollTop*0.3 + 450
+			})
+
+		$("#peach").css({
+			top: +scrollTop*0.9 + 450
+			});
+
+		}
+
+
 	
 
 
