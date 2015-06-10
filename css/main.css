@@ -357,7 +357,6 @@ li {
 }
 
 
-
 #svg {
   position: absolute;
   width: 90%;
@@ -682,17 +681,127 @@ li {
 
 /*optimizing for mobile sizing
 */
-/*@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ */
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
+
+#container {
+  position: absolute;
+  width: 100%;
+  max-height: 1000px;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+}
+
+#empty {
+  height: 1112px;
+  overflow-x: hidden; 
+  max-width: 100%;
+}
 
 
-/*#watermelon {*/
-/*  top: 100px;*/
-/*  left: 8%;*/
-/*  width: 40%;*/
-/*  height: 40%;*/
-/*  position: fixed;*/
-/*  float: left;*/
-/*}*/
+#myLine {
+  stroke-width: 4px;
+}
+#myLine2 {
+  stroke-width: 4px;
+}
+#myLine3 {
+  stroke-width: 4px;
+}
+#myLine4 {
+  stroke-width: 4px;
+}
+#myLine5 {
+  stroke-width: 4px;
+}
+#myLine6 {
+  stroke-width: 4px;
+}
+#myLine7 {
+  stroke-width: 4px;
+}
+#myLine8 {
+  stroke-width: 4px;
+}
+
+#svg {
+  position: absolute;
+  width: 80%;
+}
+
+
+#watermelon {
+  top: 100px;
+  left: 8%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+  float: left;
+}
     
+#banana {
+  top: 15%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+  float: left;
+}
 
-/*}*/
+#apple {
+  top: 35%;
+  left: 8%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+
+}
+
+#orange {
+  top: 35%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+
+}
+
+#strawberry {
+  top: 55%;
+  left: 8%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+
+}
+
+#mango {
+  top: 55%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+
+}
+
+#pineapple {
+  top: 75%;
+  left: 8%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+  z-index: 10000;
+
+}
+
+#peach {
+  top: 75%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+  z-index: 10000;
+
+}  
+
+}
