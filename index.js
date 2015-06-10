@@ -161,12 +161,14 @@ var docWidth = document.documentElement.offsetWidth;
 		$(".circle").stop().fadeTo('fast',10);
 	}
 
-
+	//if statement including media queries
 
 	if (mb.matches) { 
-	//scrolling fruits
-	//if statement including media queries
+	//scrolling fruits fading from screen
+	//do this if window width is at least 640px
+	
 			if (mq.matches) {
+				//do this if window is more than 1610px
 
 			$("#watermelon").css({
 			top: -scrollTop*0.2 + 200
@@ -205,9 +207,11 @@ var docWidth = document.documentElement.offsetWidth;
 		} else {
 		$("#watermelon").stop().fadeTo('fast',10);
 	}
-	// window width is at least 640px
+	
 		}
 	else {
+
+		// otherwise if window width is less than 640px (mobile) do this:
 		$("#watermelon").css({
 			top: -scrollTop*0.6 + 80
 			});
@@ -240,9 +244,10 @@ var docWidth = document.documentElement.offsetWidth;
 			top: +scrollTop*0.9 + 440
 			});
 
-	// window width is less than 640px
+	
 		}
 		}  else {
+			//do this if window is larger than 1610px
 
 		$("#watermelon").css({
 			top: -scrollTop*0.6 + 220
@@ -279,9 +284,7 @@ var docWidth = document.documentElement.offsetWidth;
 		}
 
 
-	
-
-
+	//fading from screen
 
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#banana").stop().fadeTo(100,0);
