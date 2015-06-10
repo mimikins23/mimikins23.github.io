@@ -641,6 +641,45 @@ li {
   #submitAPI {
     top: 85%;
   }
+  #myLine {
+  stroke: #fca4e9;
+  stroke-width: 6px;
+}
+
+#myLine2 {
+  stroke: #f9b57d;
+  stroke-width: 6px;
+}
+
+#myLine3 {
+  stroke: #f9eb6b;
+  stroke-width: 6px;
+}
+
+#myLine4 {
+  stroke: #87f4a8;
+  stroke-width: 6px;
+}
+
+#myLine5 {
+  stroke: #97efe7;
+  stroke-width: 6px;
+}
+
+#myLine6 {
+  stroke: #f7a4a4;
+  stroke-width: 6px;
+}
+
+#myLine7 {
+  stroke: #92f4ba;
+  stroke-width: 6px;
+}
+
+#myLine8 {
+  stroke: #a2c3f9;
+  stroke-width: 6px;
+}
   
 }
 
@@ -699,10 +738,11 @@ li {
       display: none;
     }
 
-    #recipes2 {
-  width: 90%;
+#recipes2 {
+  width: 100%;
   margin-left: 0%;
   margin-right: 0%;
+  padding: 10%;
   position: fixed;
   top: 30%;
   background-color: transparent;
@@ -925,6 +965,11 @@ header {
     #myLine8 {
       stroke-width: 4px;
     }
+
+    #svg {
+  position: absolute;
+  width: 80%;
+}
 
 
     #watermelon {
