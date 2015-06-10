@@ -32,16 +32,6 @@ var docWidth = document.documentElement.offsetWidth;
 	//trying to hide scrolling
 	$('html').css('overflow', 'hidden');
 
-	if (mq.matches) {
-		
-	// window width is at least 640px
-}
-else {
-	
-	// window width is less than 640px
-}
-	
-	
 
 	//scrolling header
 	var $head = $( '#ha-header' );
@@ -172,9 +162,21 @@ else {
 
 
 	//scrolling fruits
-	$("#watermelon").css({
-		top: -scrollTop*0.2 + 200
-	});
+
+	if (mq.matches) {
+
+			$("#watermelon").css({
+			top: -scrollTop*0.2 + 200
+			});
+	// window width is at least 640px
+		}
+	else {
+		$("#watermelon").css({
+			top: -scrollTop*0.2 + 100
+			});
+	// window width is less than 640px
+		}
+	
 
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#watermelon").stop().fadeTo(100,0);
