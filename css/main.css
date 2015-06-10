@@ -621,18 +621,34 @@ li {
   }
 }
 
-@media all and (min-width:1690px) {
+@media all and (min-width:1610px) {
+  #watermelon {
+  top: 220px;
+  }
+
+  #banana {
+  top: 220px;
+  }
+
+  #apple {
+  top: 220px;
+  }
+
+  #orange {
+  top: 220px;
+  }
+
   #strawberry {
-    top: 480px;
+    top: 450px;
   }
   #mango {
-    top: 480px;
+    top: 450px;
   }
   #pineapple {
-    top: 480px;
+    top: 450px;
   }
   #peach {
-    top: 480px;
+    top: 450px;
   }
   #submitAPI {
     top: 85%;
@@ -710,6 +726,38 @@ li {
   max-width: 100%;
 }
 
+header {
+  font-family: 'Montserrat';
+  font-size: 0.8em;
+  letter-spacing: 1.5em;
+  z-index: 10000;
+  padding: 0.5%;
+  padding-left: 5%;
+  /*padding-left: 4%;*/
+  position: absolute;
+  color: #1d58ff;
+  background-color: #fff;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+#mobile {
+  display: block;
+  font-size: 0.8em;
+  margin-left: 8%;
+  margin-right: 0%;
+  margin-top: 5px;
+  padding: 0.5%;
+ /* padding-left: 5%;*/
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  background-color: white;
+  z-index: 10000;
+  color: #1d58ff;
+  font-family: 'Montserrat';
+}
+
 
 #myLine {
   stroke-width: 4px;
@@ -743,7 +791,7 @@ li {
 
 
 #watermelon {
-  top: 100px;
+  top: 80px;
   left: 8%;
   width: 40%;
   height: 40%;
@@ -752,7 +800,7 @@ li {
 }
     
 #banana {
-  top: 100px;
+  top: 80px;
   left: 50%;
   width: 40%;
   height: 40%;
@@ -761,7 +809,7 @@ li {
 }
 
 #apple {
-  top: 250px;
+  top: 200px;
   left: 8%;
   width: 40%;
   height: 40%;
@@ -770,7 +818,7 @@ li {
 }
 
 #orange {
-  top: 250px;
+  top: 200px;
   left: 50%;
   width: 40%;
   height: 40%;
@@ -779,7 +827,7 @@ li {
 }
 
 #strawberry {
-  top: 400px;
+  top: 320px;
   left: 8%;
   width: 40%;
   height: 40%;
@@ -788,7 +836,7 @@ li {
 }
 
 #mango {
-  top: 400px;
+  top: 320px;
   left: 50%;
   width: 40%;
   height: 40%;
@@ -797,7 +845,7 @@ li {
 }
 
 #pineapple {
-  top: 550px;
+  top: 440px;
   left: 8%;
   width: 40%;
   height: 40%;
@@ -807,7 +855,7 @@ li {
 }
 
 #peach {
-  top: 550px;
+  top: 440px;
   left: 50%;
   width: 40%;
   height: 40%;
@@ -815,4 +863,5 @@ li {
   z-index: 10000;
 
 }  
+
 }
