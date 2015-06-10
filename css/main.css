@@ -732,12 +732,12 @@ li {
 
 #mobile-grid {
   display: block;
-  height: 1011.5px;
+  height: 100%;
   width: 100%;
 }
 
 #empty {
-  height: 1011.5px;
+  height: 100%;
   max-width: 100%;
 }
 
