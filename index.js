@@ -168,26 +168,35 @@ var docWidth = document.documentElement.offsetWidth;
 			$("#watermelon").css({
 			top: -scrollTop*0.2 + 200
 			});
+
+			$("#banana").css({
+			top: -scrollTop*0.35 + 200
+			});
+
+		if ((scrollTop-$(window).scrollTop())>650) {
+		$("#watermelon").stop().fadeTo(100,0);
+		} else {
+		$("#watermelon").stop().fadeTo('fast',10);
+	}
 	// window width is at least 640px
 		}
 	else {
 		$("#watermelon").css({
-			top: -scrollTop*0.2 + 100
+			top: -scrollTop*0.3 + 100
 			});
+
+		$("#banana").css({
+			top: +scrollTop*0.65 + 100
+			});
+
 	// window width is less than 640px
 		}
 	
 
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#watermelon").stop().fadeTo(100,0);
-	} else {
-		$("#watermelon").stop().fadeTo('fast',10);
-	}
+	
 
 
-	$("#banana").css({
-		top: -scrollTop*0.35 + 200
-	});
+	
 
 
 	if ((scrollTop-$(window).scrollTop())>650) {
