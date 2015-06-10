@@ -1,7 +1,11 @@
 $(function () {
 
+//code for javascript media queries
+var mq = window.matchMedia( "(min-width: 640px)" );
+
 //code to tell me which part of the code is causing horiztonal scrolling
 var docWidth = document.documentElement.offsetWidth;
+
 
 [].forEach.call(
   document.querySelectorAll('*'),
@@ -23,11 +27,21 @@ var docWidth = document.documentElement.offsetWidth;
 	var pineappleClicked= false;
 	var peachClicked= false;
 
-
-	$('html').css('overflow', 'hidden');
-
 	//hiding the recipe section initilly
 	$('#recipes2').hide();
+	//trying to hide scrolling
+	$('html').css('overflow', 'hidden');
+
+	if (mq.matches) {
+		
+	// window width is at least 640px
+}
+else {
+	
+	// window width is less than 640px
+}
+	
+	
 
 	//scrolling header
 	var $head = $( '#ha-header' );
@@ -150,7 +164,7 @@ var docWidth = document.documentElement.offsetWidth;
 		top: -scrollTop*0.6 + 668
 		});
 
-	if ((scrollTop-$(window).scrollTop())>650) {
+	if ((scrollTop-$(window).scrollTop())>720) {
 		$(".circle").stop().fadeTo(100,0);
 	} else {
 		$(".circle").stop().fadeTo('fast',10);
@@ -246,59 +260,59 @@ var docWidth = document.documentElement.offsetWidth;
 
 	//hovering states switching out images to sliced fruit
 	$("#watermelon").hover(function() {
-		$("#watermelon img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-09.png' );
+		$("#watermelon img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-09.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#watermelon img").attr('src', '/img/FEWD51_FinalProject_Fruits-01.png' );
+		$("#watermelon img").attr('src', 'img/FEWD51_FinalProject_Fruits-01.png' );
 	});
 
 	$("#banana").hover(function() {
-		$("#banana img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-10.png' );
+		$("#banana img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-10.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#banana img").attr('src', '/img/FEWD51_FinalProject_Fruits-02.png' );
+		$("#banana img").attr('src', 'img/FEWD51_FinalProject_Fruits-02.png' );
 	});
 
 	$("#apple").hover(function() {
-		$("#apple img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-11.png' );
+		$("#apple img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-11.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#apple img").attr('src', '/img/FEWD51_FinalProject_Fruits-03.png' );
+		$("#apple img").attr('src', 'img/FEWD51_FinalProject_Fruits-03.png' );
 	});
 
 	$("#orange").hover(function() {
-		$("#orange img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-12.png' );
+		$("#orange img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-12.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#orange img").attr('src', '/img/FEWD51_FinalProject_Fruits-04.png' );
+		$("#orange img").attr('src', 'img/FEWD51_FinalProject_Fruits-04.png' );
 	});
 
 	$("#strawberry").hover(function() {
-		$("#strawberry img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-13.png' );
+		$("#strawberry img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-13.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#strawberry img").attr('src', '/img/FEWD51_FinalProject_Fruits-05.png' );
+		$("#strawberry img").attr('src', 'img/FEWD51_FinalProject_Fruits-05.png' );
 	});
 
 	$("#mango").hover(function() {
-		$("#mango img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-14.png' );
+		$("#mango img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-14.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#mango img").attr('src', '/img/FEWD51_FinalProject_Fruits-06.png' );
+		$("#mango img").attr('src', 'img/FEWD51_FinalProject_Fruits-06.png' );
 	});
 
 	$("#pineapple").hover(function() {
-		$("#pineapple img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-15.png' );
+		$("#pineapple img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-15.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#pineapple img").attr('src', '/img/FEWD51_FinalProject_Fruits-07.png' );
+		$("#pineapple img").attr('src', 'img/FEWD51_FinalProject_Fruits-07.png' );
 	});
 
 	$("#peach").hover(function() {
-		$("#peach img").attr('src', '/img/FEWD51_FinalProject_FruitsNewType-16.png' );
+		$("#peach img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-16.png' );
 		// 	console.log("showing new image");
 	}, function () {
-		$("#peach img").attr('src', '/img/FEWD51_FinalProject_Fruits-08.png' );
+		$("#peach img").attr('src', 'img/FEWD51_FinalProject_Fruits-08.png' );
 	});
 
 	// var watermelonline = document.getElementById('myLine')
@@ -332,8 +346,7 @@ var docWidth = document.documentElement.offsetWidth;
       }, 30);
     });
   };
-  
-//telling the line animation to run over these combinations, fruit and the line animation
+
   slice( $("#watermelon"), document.getElementById('myLine'));
   slice( $("#banana"), document.getElementById('myLine2'));
   slice( $("#apple"), document.getElementById('myLine3'));
