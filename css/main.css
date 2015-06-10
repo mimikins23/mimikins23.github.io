@@ -620,9 +620,6 @@ li {
   #submitAPI {
     top: 80%;
   }
-
- 
-
 }
 
 @media all and (min-width:1690px) {
@@ -693,7 +690,7 @@ li {
     }*/
     
     /*messaging for viewing on desktop instead*/
-    #mobile {
+#mobile {
   display: block;
   margin-left: 8%;
   margin-right: 0%;
@@ -707,34 +704,46 @@ li {
   z-index: 10000;
   color: #1d58ff;
   font-family: 'Montserrat';
-    }
+}
 
-    #submitAPI {
-      width: 25%;
-      margin-left: 40%;
-      top: 50%;
-    }
+#container {
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#submitAPI {
+  width: 25%;
+  margin-left: 40%;
+  top: 50%;
+}
+
+#grid img{
+  height:100%;
+  width:100%;
+}
    
-   #desktop-grid {
-    display: none;
+#desktop-grid {
+  display: none;
    }
 
-    #mobile-grid {
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    }
+#mobile-grid {
+  display: block;
+  height: 1011.5px;
+  width: 100%;
+}
 
-  #empty {
-  max-height: 736px;
-  overflow-x: hidden;
-  overflow-y: hidden; 
+#empty {
+  height: 1011.5px;
   max-width: 100%;
 }
-    #recipes {
-      display: none;
-    }
+
+#recipes {
+  display: none;
+}
 
 #recipes2 {
   width: 100%;
@@ -896,7 +905,6 @@ li {
   padding-left: 4%;
 }
 
-
 #directions {
   border-left: 2px solid #fcd9d9;
   border-right: 2px solid #fcd9d9;
@@ -939,56 +947,59 @@ header {
   margin-left: 3%;
   margin-top: 3%;
 }
-    #myLine {
-      stroke-width: 4px;
-    }
-    #myLine2 {
-      stroke-width: 4px;
-    }
-    #myLine3 {
-      stroke-width: 4px;
-    }
-    #myLine4 {
-      stroke-width: 4px;
-    }
-    #myLine5 {
-      stroke-width: 4px;
-    }
-    #myLine6 {
-      stroke-width: 4px;
-    }
-    #myLine7 {
-      stroke-width: 4px;
-    }
-    #myLine8 {
-      stroke-width: 4px;
-    }
 
-    #svg {
+#myLine {
+  stroke-width: 4px;
+}
+#myLine2 {
+  stroke-width: 4px;
+}
+#myLine3 {
+  stroke-width: 4px;
+}
+#myLine4 {
+  stroke-width: 4px;
+}
+#myLine5 {
+  stroke-width: 4px;
+}
+#myLine6 {
+  stroke-width: 4px;
+}
+#myLine7 {
+  stroke-width: 4px;
+}
+#myLine8 {
+  stroke-width: 4px;
+}
+
+#svg {
   position: absolute;
   width: 80%;
 }
 
 
-    #watermelon {
-      top: 15%;
-      left: 5%;
-      width: 40%;
-      height: 40%;
-      position: fixed;
-      float: left;
-    }
-    #banana {
-      top: 15%;
-      left: 50%;
-      width: 40%;
-      height: 40%;
-      position: fixed;
-      float: left;
-    }
-    #apple {
+#watermelon {
+  top: 15%;
+  left: 8%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+  float: left;
+}
+    
+#banana {
+  top: 15%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+  float: left;
+}
+
+#apple {
   top: 35%;
-  left: 5%;
+  left: 8%;
   width: 40%;
   height: 40%;
   position: fixed;
@@ -1006,7 +1017,7 @@ header {
 
 #strawberry {
   top: 55%;
-  left: 5%;
+  left: 8%;
   width: 40%;
   height: 40%;
   position: fixed;
@@ -1024,7 +1035,7 @@ header {
 
 #pineapple {
   top: 75%;
-  left: 5%;
+  left: 8%;
   width: 40%;
   height: 40%;
   position: fixed;
@@ -1042,32 +1053,4 @@ header {
 
 }
 
-/*html {
-  overflow-x: hidden; 
-  max-width: 100%;
-}*/
-
-#container {
-  overflow-y: hidden; 
-  max-height: 100%;
-}
-
-/*div #recipes .clearfix {
-  overflow-x: hidden; 
-  max-width: 100%;
-}
-
-div .row .clearfix {
-  overflow-x: hidden; 
-  max-width: 100%;
-}
-
-div .row {
-  overflow-x: hidden; 
-  max-width: 100%;
-}
-
-img {
-  overflow-x: hidden; 
-}*/
 }
