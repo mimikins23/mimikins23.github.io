@@ -779,7 +779,7 @@ li {
 }
 
 #strawberry {
-  top: 55%;
+  top: 400px;
   left: 8%;
   width: 40%;
   height: 40%;
@@ -788,7 +788,7 @@ li {
 }
 
 #mango {
-  top: 55%;
+  top: 400px;
   left: 50%;
   width: 40%;
   height: 40%;
@@ -797,7 +797,7 @@ li {
 }
 
 #pineapple {
-  top: 75%;
+  top: 550px;
   left: 8%;
   width: 40%;
   height: 40%;
@@ -807,7 +807,7 @@ li {
 }
 
 #peach {
-  top: 75%;
+  top: 550px;
   left: 50%;
   width: 40%;
   height: 40%;
