@@ -162,7 +162,7 @@ var docWidth = document.documentElement.offsetWidth;
 
 
 	//scrolling fruits
-
+	//if statement including media queries
 	if (mq.matches) {
 
 			$("#watermelon").css({
@@ -171,6 +171,30 @@ var docWidth = document.documentElement.offsetWidth;
 
 			$("#banana").css({
 			top: -scrollTop*0.35 + 200
+			});
+
+			$("#apple").css({
+			top: -scrollTop*0.2 + 200
+			});
+
+			$("#orange").css({
+			top: -scrollTop*0.35 + 200
+			});
+
+			$("#strawberry").css({
+			top: +scrollTop*0.2 + 390
+			});
+
+			$("#mango").css({
+			top: +scrollTop*0.35 + 390
+			});
+
+			$("#pineapple").css({
+			top: +scrollTop*0.2 + 390
+			})
+
+			$("#peach").css({
+			top: +scrollTop*0.35 + 390
 			});
 
 		if ((scrollTop-$(window).scrollTop())>650) {
@@ -186,17 +210,38 @@ var docWidth = document.documentElement.offsetWidth;
 			});
 
 		$("#banana").css({
-			top: +scrollTop*0.65 + 100
+			top: -scrollTop*0.65 + 100
 			});
+
+		$("#apple").css({
+			top: -scrollTop*0.8 + 250
+			});
+
+		$("#orange").css({
+			top: -scrollTop*0.35 + 250
+			});
+
+		$("#strawberry").css({
+			top: +scrollTop*0.2 + 400
+			});
+
+		$("#mango").css({
+			top: +scrollTop*1.35 + 400
+			});
+
+		$("#pineapple").css({
+			top: +scrollTop*0.8 + 550
+			})
+
+		$("#peach").css({
+			top: +scrollTop*0.9 + 550
+			});
+
 
 	// window width is less than 640px
 		}
 	
 
-	
-
-
-	
 
 
 	if ((scrollTop-$(window).scrollTop())>650) {
@@ -205,29 +250,20 @@ var docWidth = document.documentElement.offsetWidth;
 		$("#banana").stop().fadeTo('fast',10);
 	}
 
-	$("#apple").css({
-		top: -scrollTop*0.2 + 200
-	});
-
+	
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#apple").stop().fadeTo(100,0);
 	} else {
 		$("#apple").stop().fadeTo('fast',10);
 	}
 
-	$("#orange").css({
-		top: -scrollTop*0.35 + 200
-	});
-
+	
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#orange").stop().fadeTo(100,0);
 	} else {
 		$("#orange").stop().fadeTo('fast',10);
 	}
 
-	$("#strawberry").css({
-		top: +scrollTop*0.2 + 390
-	});
 
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#strawberry").stop().fadeTo(100,0);
@@ -235,19 +271,12 @@ var docWidth = document.documentElement.offsetWidth;
 		$("#strawberry").stop().fadeTo('fast',10);
 	}
 
-	$("#mango").css({
-		top: +scrollTop*0.35 + 390
-	});
-
+	
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#mango").stop().fadeTo(100,0);
 	} else {
 		$("#mango").stop().fadeTo('fast',10);
 	}
-
-	$("#pineapple").css({
-		top: +scrollTop*0.2 + 390
-	})
 
 
 	if ((scrollTop-$(window).scrollTop())>650) {
@@ -255,10 +284,6 @@ var docWidth = document.documentElement.offsetWidth;
 	} else {
 		$("#pineapple").stop().fadeTo('fast',10);
 	}
-
-	$("#peach").css({
-		top: +scrollTop*0.35 + 390
-	});
 
 
 	if ((scrollTop-$(window).scrollTop())>650) {
