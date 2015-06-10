@@ -695,7 +695,7 @@ li {
 }
 
 #empty {
-  height: 1112px;
+  height: 100%;
   overflow-x: hidden; 
   max-width: 100%;
 }
@@ -706,7 +706,7 @@ li {
 
 #mobile-grid {
   display: block;
-  height: 1112px;
+  height: 100%;
   max-width: 100%;
 }
 
