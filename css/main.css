@@ -692,6 +692,7 @@ li {
       
     }*/
     
+    /*messaging for viewing on desktop instead*/
     #mobile {
   display: block;
   margin-left: 8%;
@@ -731,9 +732,6 @@ li {
   overflow-y: hidden; 
   max-width: 100%;
 }
-
-
-
     #recipes {
       display: none;
     }
@@ -922,11 +920,11 @@ li {
   transition: all 0.5s;
 }
 
-.x {
+/*.x {
 width: 10%;
 position: absolute;
 margin-left: 100%;
-}
+}*/
 
 header {
   font-family: 'Montserrat';
