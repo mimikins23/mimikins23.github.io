@@ -206,35 +206,35 @@ var docWidth = document.documentElement.offsetWidth;
 		}
 	else {
 		$("#watermelon").css({
-			top: -scrollTop*0.3 + 100
+			top: -scrollTop*0.6 + 80
 			});
 
 		$("#banana").css({
-			top: -scrollTop*0.65 + 100
+			top: -scrollTop*0.6 + 80
 			});
 
 		$("#apple").css({
-			top: -scrollTop*0.8 + 250
+			top: -scrollTop*0.92 + 200
 			});
 
 		$("#orange").css({
-			top: -scrollTop*0.35 + 250
+			top: -scrollTop*1.5 + 200
 			});
 
 		$("#strawberry").css({
-			top: +scrollTop*0.2 + 400
+			top: +scrollTop*0.8 + 320
 			});
 
 		$("#mango").css({
-			top: +scrollTop*1.35 + 400
+			top: +scrollTop*1.35 + 320
 			});
 
 		$("#pineapple").css({
-			top: +scrollTop*0.8 + 550
+			top: +scrollTop*0.3 + 440
 			})
 
 		$("#peach").css({
-			top: +scrollTop*0.9 + 550
+			top: +scrollTop*0.9 + 440
 			});
 
 
