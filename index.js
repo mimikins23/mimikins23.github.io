@@ -17,6 +17,10 @@ var docWidth = document.documentElement.offsetWidth;
   }
 );
 
+
+
+
+
 //initial states of fruits 
 	var selectedFruits= [];
 	var watermelonClicked = false;
@@ -209,9 +213,12 @@ var docWidth = document.documentElement.offsetWidth;
 	
 		}
 	else {
-		alert('This site is best viewed on desktop');
-		// otherwise if window width is less than 640px (mobile) do this:
 
+		// otherwise if window width is less than 640px (mobile) do this:
+		if(!localStorage["alertdisplayed"]) {
+    	alert("For full interactivity this website is best displayed on desktop")
+    	localStorage["alertdisplayed"] = true
+		}
 		
 
 		$("#watermelon").css({
