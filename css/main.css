@@ -904,7 +904,7 @@ margin-left: 100%;
 
 #recipes2 {
   width: 100%;
-  margin-left: 10%;
+  margin-left: 4%;
   margin-right: 10%;
   position: fixed;
   top: 24%;
@@ -935,7 +935,7 @@ margin-left: 100%;
 }
 
 #recipename {
-  border: 3px solid #fcd9d9;
+  border: 1.5px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -955,9 +955,9 @@ margin-left: 100%;
 }
 
 #preptime {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 1.5px solid #fcd9d9;
+  border-right: 1.5px solid #fcd9d9;
+  border-bottom: 1.5px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -980,8 +980,8 @@ margin-left: 100%;
 }
 
 #rating {
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-right: 1.5px solid #fcd9d9;
+  border-bottom: 1.5px solid #fcd9d9;
   margin-bottom: 40%;
   font-family: 'Montserrat';
   text-transform: uppercase;
@@ -1006,9 +1006,9 @@ margin-left: 100%;
 }
 
 #ingredientstitle {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 1.5px solid #fcd9d9;
+  border-right: 1.5px solid #fcd9d9;
+  border-bottom: 1.5px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -1031,9 +1031,9 @@ margin-left: 100%;
 
 
 #ingredients {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 1.5px solid #fcd9d9;
+  border-right: 1.5px solid #fcd9d9;
+  border-bottom: 1.5px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -1062,9 +1062,9 @@ li {
 
 
 #directions {
-  border-left: 3px solid #fcd9d9;
-  border-right: 3px solid #fcd9d9;
-  border-bottom: 3px solid #fcd9d9;
+  border-left: 1.5px solid #fcd9d9;
+  border-right: 1.5px solid #fcd9d9;
+  border-bottom: 1.5px solid #fcd9d9;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
