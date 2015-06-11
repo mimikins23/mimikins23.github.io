@@ -217,10 +217,10 @@ var docWidth = document.documentElement.offsetWidth;
 	else {
 
 		// otherwise if window width is less than 640px (mobile) do this:
-		if(!localStorage["alertdisplayed"]) {
-    	alert("For full interactivity this website is best displayed on desktop")
-    	localStorage["alertdisplayed"] = true
-		}
+		// if(!localStorage["alertdisplayed"]) {
+  //   	alert("For full interactivity this website is best displayed on desktop")
+  //   	localStorage["alertdisplayed"] = true
+		// }
 
 
 		$("#watermelon").css({
