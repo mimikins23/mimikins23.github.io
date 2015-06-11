@@ -121,7 +121,6 @@ var docWidth = document.documentElement.offsetWidth;
     }
 	
 
-
 	//scrolling dots
 		$("#dot1").css({
 		top: +scrollTop*0.1 + 190
@@ -210,8 +209,11 @@ var docWidth = document.documentElement.offsetWidth;
 	
 		}
 	else {
-
+		alert('This site is best viewed on desktop');
 		// otherwise if window width is less than 640px (mobile) do this:
+
+		
+
 		$("#watermelon").css({
 			top: -scrollTop*0.6 + 80
 			});
