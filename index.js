@@ -1,5 +1,7 @@
 $(function () {
 
+
+
 //code for javascript media queries
 var mq = window.matchMedia( "(min-width: 640px)" );
 var mb = window.matchMedia( "(max-width: 1610px)" );
@@ -215,10 +217,12 @@ var docWidth = document.documentElement.offsetWidth;
 	else {
 
 		// otherwise if window width is less than 640px (mobile) do this:
-		if(!localStorage["alertdisplayed"]) {
-    	alert("For full interactivity this website is best displayed on desktop")
-    	localStorage["alertdisplayed"] = true
-		}
+		// if(!localStorage["alertdisplayed"]) {
+  //   	alert("For full interactivity this website is best displayed on desktop")
+  //   	localStorage["alertdisplayed"] = true
+		// }
+
+		alert("For full interactivity, this website is best displayed on desktop");
 		
 
 		$("#watermelon").css({
