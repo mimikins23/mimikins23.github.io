@@ -73,7 +73,7 @@ var docWidth = document.documentElement.offsetWidth;
 	//scrolling header colour changes + dots 
 
     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('header').css({"color":"#f2d1d4"});
+        $('header').css({"color":"#efafca"});
     } else {
     	$('header').css({"color":"#1d58ff"});
     }
@@ -347,7 +347,13 @@ var docWidth = document.documentElement.offsetWidth;
 
 	});
 
-	//hovering states switching out images to sliced fruit
+	//hovering states switching out images to sliced fruit and x out:
+	$(".x").hover(function() {
+		$(".x").attr('src','img/x-blue-02.png');
+	}, function () {
+		$(".x").attr('src','img/x-blue-01.png');
+	});
+
 	$("#watermelon").hover(function() {
 		$("#watermelon img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-09.png' );
 		// 	console.log("showing new image");
