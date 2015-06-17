@@ -746,10 +746,10 @@ header {
   font-size: 0.7em;
   /*margin-left: 8%;*/
   margin-right: 0%;
-  margin-top: 5px;
+  margin-top: 2px;
   padding: 0.5%;
-  padding-left: 5%;
-  margin-left: 8%;
+  padding-left: 0%;
+  margin-left: 3%;
   text-align: center;
   position: absolute;
   top: 10%;
@@ -897,17 +897,18 @@ header {
 }
 
 .x {
-width: 4%;
+display: none;
+/*width: 8%;
 position: absolute;
-margin-left: 100%;
+margin-left: 100%;*/
 }
 
 #recipes2 {
-  width: 100%;
-  margin-left: 4%;
-  margin-right: 10%;
+  width: 90%;
+  margin-left: 8%;
+  margin-right: 5%;
   position: fixed;
-  top: 24%;
+  top: 20%;
   background-color: transparent;
   z-index: 5000;
  /* overflow: scroll;*/
@@ -923,7 +924,7 @@ margin-left: 100%;
   letter-spacing: 1em;
   margin: 0;
   padding: 2%;
-  color: black;
+  color: #efafca;
   cursor: default;
   /*height: 7%;*/
   /*height: 100%;*/
@@ -935,7 +936,7 @@ margin-left: 100%;
 }
 
 #recipename {
-  border: 1.5px solid #fcd9d9;
+  border: 2.5px solid #1d58ff;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -944,7 +945,7 @@ margin-left: 100%;
   margin: 0;
   padding: 2%;
   padding-left: 6.5%;
-  color: black;
+  color: #efafca;
   background-color: #fff;
   cursor: default;
   /*height: 100%;*/
@@ -955,18 +956,18 @@ margin-left: 100%;
 }
 
 #preptime {
-  border-left: 1.5px solid #fcd9d9;
-  border-right: 1.5px solid #fcd9d9;
-  border-bottom: 1.5px solid #fcd9d9;
+  border-left: 2.5px solid #1d58ff;
+  border-right: 2.5px solid #1d58ff;
+  border-bottom: 2.5px solid #1d58ff;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1.5vw;
+  font-size: 1em;
   letter-spacing: 0.2em;
   margin: 0;
   padding: 2%;
   padding-left: 6.5%; 
-  color: black;
+  color: #efafca;
   background-color: #fff;
   cursor: default;
   width: 50%;
@@ -980,18 +981,18 @@ margin-left: 100%;
 }
 
 #rating {
-  border-right: 1.5px solid #fcd9d9;
-  border-bottom: 1.5px solid #fcd9d9;
+  border-right: 2.5px solid #1d58ff;
+  border-bottom: 2.5px solid #1d58ff;
   margin-bottom: 40%;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1.5vw;
+  font-size: 1em;
   letter-spacing: 0.2em;
   margin: 0;
   padding: 2%;
   padding-left: 6.5%;
-  color: black;
+  color: #efafca;
   background-color: #fff;
   cursor: default;
   width: 50%;
@@ -1006,9 +1007,9 @@ margin-left: 100%;
 }
 
 #ingredientstitle {
-  border-left: 1.5px solid #fcd9d9;
-  border-right: 1.5px solid #fcd9d9;
-  border-bottom: 1.5px solid #fcd9d9;
+  border-left: 2.5px solid #1d58ff;
+  border-right: 2.5px solid #1d58ff;
+  border-bottom: 2.5px solid #1d58ff;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -1019,7 +1020,7 @@ margin-left: 100%;
   padding: 1%;
   padding-top: 1%;
   padding-left: 6.5%;
-  color: black;
+  color: #efafca;
   cursor: default;
   clear: both;
   /*height: 100%;*/
@@ -1031,21 +1032,21 @@ margin-left: 100%;
 
 
 #ingredients {
-  border-left: 1.5px solid #fcd9d9;
-  border-right: 1.5px solid #fcd9d9;
-  border-bottom: 1.5px solid #fcd9d9;
+  border-left: 2.5px solid #1d58ff;
+  border-right: 2.5px solid #1d58ff;
+  border-bottom: 2.5px solid #1d58ff;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.5em;
   letter-spacing: 0.2em;
   line-height: 2em;
-  max-height: 150px;
+  max-height: 250px;
   margin: 0;
   padding: 2%;
   background-color: #fff;
   /*padding-left: 6.5%;*/
-  color: black;
+  color: #efafca;
   cursor: default;
   padding-left: 3%;
   /*height: 100%;*/
@@ -1057,14 +1058,15 @@ margin-left: 100%;
 }
 
 li {
-  padding-left: 4%;
+  padding-left: 3%;
+  margin-left: 3%;
 }
 
 
 #directions {
-  border-left: 1.5px solid #fcd9d9;
-  border-right: 1.5px solid #fcd9d9;
-  border-bottom: 1.5px solid #fcd9d9;
+  border-left: 2.5px solid #1d58ff;
+  border-right: 2.5px solid #1d58ff;
+  border-bottom: 2.5px solid #1d58ff;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 300;
@@ -1074,7 +1076,7 @@ li {
   margin: 0;
   padding: 2%;
   padding-left: 6.5%;
-  color: black;
+  color: #efafca;
   background-color: #fff;
   cursor: default;
   /*height: 100%;*/
