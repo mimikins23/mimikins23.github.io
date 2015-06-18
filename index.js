@@ -255,6 +255,40 @@ var docWidth = document.documentElement.offsetWidth;
 			top: +scrollTop*0.9 + 440
 			});
 
+		//dots movement on mobile 
+		$("#dot1").css({
+		top: +scrollTop*0.1 + 190
+		});
+
+		$("#dot2").css({
+		top: +scrollTop*0.8 + 280
+		});
+
+		$("#dot3").css({
+		top: -scrollTop*0.4 + 380
+		});
+
+		$("#dot4").css({
+		top: +scrollTop*0.6 + 387
+		});
+
+		$("#dot5").css({
+		top: -scrollTop*0.7 + 570
+		});
+
+		$("#dot6").css({
+		top: +scrollTop*0.6 + 90
+		});
+
+		$("#dot7").css({
+		top: -scrollTop*1.5 + 476
+		});
+
+		$("#dot8").css({
+		top: -scrollTop*1.0 + 668
+		});
+
+
 	
 		}
 		}  else {
