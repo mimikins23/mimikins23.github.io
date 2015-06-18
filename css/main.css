@@ -744,14 +744,14 @@ header {
 
 #mobile {
   display: block;
-  font-size: 1em;
+  font-size: 0.8em;
   letter-spacing: 0em;
   text-align: left;
- /* margin-right: 0%;
+  /*margin-right: 0%;
   margin-top: 2px;
   padding: 0.5%;
-  padding-left: 0%;
-  margin-left: 6%;*/
+  padding-left: 0%;*/
+  margin-left: 0%;
   position: absolute;
   top: 10%;
   background-color: white;
