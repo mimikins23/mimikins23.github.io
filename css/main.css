@@ -747,19 +747,20 @@ header {
   font-size: 0.8em;
   letter-spacing: 0em;
   text-align: left;
-  /*margin-right: 0%;
+  margin-right: 0%;
   margin-top: 2px;
   padding: 0.5%;
-  padding-left: 0%;*/
- /* margin-left: 0%;
+  padding-left: 0%;
+  margin-left: 0%;
   position: absolute;
   top: 10%;
   background-color: white;
   z-index: 10000;
   color: #1d58ff;
-  font-family: 'Montserrat';*/
-  /*padding-left: 5%;*/
-}*/
+  font-family: 'Montserrat';
+  padding-left: 5%;
+}
+*/
 
 #submitAPI {
   width: 20%;
