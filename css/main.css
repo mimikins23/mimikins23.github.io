@@ -1,673 +1,1090 @@
-$(function () {
+.clearfix:after {
+  content:" ";
+  display:table;
+  clear: both;
+}
+
+/*getting rid of the horizontal scrolling*/
+
+html {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+#container {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+div #recipes .clearfix {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+div .row .clearfix {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+div .row {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+header {
+  font-family: 'Montserrat';
+  letter-spacing: 1.5em;
+  z-index: 10000;
+  padding: 0.5%;
+  padding-left: 2%;
+  /*padding-left: 4%;*/
+  position: absolute;
+  color: #1d58ff;
+  background-color: #fff;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+body {
+  /* position: relative; */
+  margin: 0;
+  max-width: 100%;
+
+}
+
+/*takes blue highlight away from the images*/
+img.size {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img.size::-moz-selection { background:transparent; }
+img.size::selection { background:transparent; }
+
+/*takes blue highlight away form the button*/
+#submitAPI:focus {
+  outline: none;
+}
+
+#back:focus {
+  outline: none;
+}
+
+/*takes away the visibility of the scrollbar on the sides*/
+#container::-webkit-scrollbar { 
+    display: none; 
+}
+
+#container::-moz-user-scrollbar { 
+    display: none; 
+}
+
+
+html::-webkit-scrollbar { 
+    display: none; 
+}
+
+html::-moz-user-scrollbar { 
+    display: none; 
+}
+
+#ingredients::-webkit-scrollbar { 
+    display: none; 
+}
+
+#ingredients::-webkit-scrollbar { 
+    display: none; 
+}
+
+#ingredients::-moz-user-scrollbar { 
+    display: none; 
+}
+
+#submitAPI:hover {
+  color: white;
+  border: 4px solid #1d58ff;
+  background-color: #1d58ff;
+}
+
+#back:hover {
+  color: #fff;
+}
+
+#submitAPI {
+  width: 12%;
+  margin-left: 45%;
+  /*float:left;*/
+  top: 70%;
+  position: absolute;
+  background-color: #f2d1d4;
+  border: 4px solid #f2d1d4;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px;
+  letter-spacing: 3px;
+  /*background-color: transparent;*/
+  z-index: 1000;
+}
+
+#back {
+  background-color: #1d58ff;
+  top: 50%;
+  width: 100%;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #f2c0c4;
+  padding: 10px;
+  border: 0px;
+
+}
+
+
+/*recipe section*/
+
+#mobile {
+  display: none;
+}
+
+.x {
+width: 3%;
+position: absolute;
+margin-left: 100%;
+}
+
+#recipes2 {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: fixed;
+  top: 24%;
+  background-color: transparent;
+  z-index: 5000;
+ /* overflow: scroll;*/
+}
 
 
 
-//code for javascript media queries
-var mq = window.matchMedia( "(min-width: 640px)" );
-var mb = window.matchMedia( "(max-width: 1610px)" );
+#filler {
+  /*border: 3px solid black;*/
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 1em;
+  margin: 0;
+  padding: 2%;
+  color: black;
+  cursor: default;
+  /*height: 7%;*/
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: transparent;
+}
 
-//code to tell me which part of the code is causing horiztonal scrolling
-var docWidth = document.documentElement.offsetWidth;
+#recipename {
+  border: 3px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5vw;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%;
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#preptime {
+  border-left: 3px solid #1d58ff;
+  border-right: 3px solid #1d58ff;
+  border-bottom: 3px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5vw;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%; 
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  width: 50%;
+  float: left;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  white-space: nowrap;
+}
+
+#rating {
+  border-right: 3px solid #1d58ff;
+  border-bottom: 3px solid #1d58ff;
+  margin-bottom: 40%;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5vw;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%;
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  width: 50%;
+  float: left;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#ingredientstitle {
+  border-left: 3px solid #1d58ff;
+  border-right: 3px solid #1d58ff;
+  border-bottom: 3px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5vw;
+  letter-spacing: 0.2em;
+  background-color: #fff;
+  margin: 0;
+  padding: 1%;
+  padding-top: 1%;
+  padding-left: 6.5%;
+  color: #efafca;
+  cursor: default;
+  clear: both;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
 
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
+#ingredients {
+  border-left: 3px solid #1d58ff;
+  border-right: 3px solid #1d58ff;
+  border-bottom: 3px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  max-height: 200px;
+  margin: 0;
+  padding: 2%;
+  background-color: #fff;
+  /*padding-left: 6.5%;*/
+  color: #efafca;
+  cursor: default;
+  padding-left: 3%;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: scroll;
+}
+
+li {
+  padding-left: 4%;
+}
+
+
+#directions {
+  border-left: 3px solid #1d58ff;
+  border-right: 3px solid #1d58ff;
+  border-bottom: 3px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 6.5%;
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+/*#noscroll {
+  overflow: hidden;
+}*/
+
+#container {
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+
+#svg {
+  position: absolute;
+  width: 90%;
+}
+
+#myLine {
+  stroke: #fca4e9;
+  stroke-width: 5px;
+}
+
+#myLine2 {
+  stroke: #f9b57d;
+  stroke-width: 5px;
+}
+
+#myLine3 {
+  stroke: #f9eb6b;
+  stroke-width: 5px;
+}
+
+#myLine4 {
+  stroke: #87f4a8;
+  stroke-width: 5px;
+}
+
+#myLine5 {
+  stroke: #97efe7;
+  stroke-width: 5px;
+}
+
+#myLine6 {
+  stroke: #f7a4a4;
+  stroke-width: 5px;
+}
+
+#myLine7 {
+  stroke: #92f4ba;
+  stroke-width: 5px;
+}
+
+#myLine8 {
+  stroke: #a2c3f9;
+  stroke-width: 5px;
+}
+
+
+
+#grid {
+ /* background: red;*/
+  top: 0;
+
+}
+
+#grid img {
+  height:100%;
+  width:100%;
+}
+
+#desktop-grid {
+  height: 100%;
+  width: 100%;
+}
+
+#mobile-grid {
+  display: none;
+}
+
+
+#marble {
+/*  background: blue;*/
+  top: 0px;
+  background: url('../img/marble9.jpg') no-repeat center center fixed;
+   -webkit-background-size: cover;
+      -moz-background-size: cover;
+        -o-background-size: cover;
+           background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  padding: 0;
+  margin: 0;
+
+}
+
+/*this is the sizing for the fruit to make it responsive to size*/
+.size {
+  /*height: 60%;*/
+  width: 100%;
+}
+
+
+
+#watermelon {
+  top: 200px;
+  left: 13%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+  float: left;
+
+}
+
+
+
+#banana {
+  top: 200px;
+  left: 33%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#apple {
+  top: 200px;
+  left: 52%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#orange {
+  top: 200px;
+  left: 72.5%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#strawberry {
+  top: 390px;
+  left: 13%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#mango {
+  top: 390px;
+  left: 33%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#pineapple {
+  top: 390px;
+  left: 52%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#peach {
+  top: 390px;
+  left: 72.5%;
+  width: 15%;
+  height: 15%;
+  position: fixed;
+
+}
+
+#dot1 {
+  top: 190px;
+  left: 46.3%;
+  background: #f2d1d4;
+}
+
+#dot2 {
+  top: 280px;
+  left: 32.8%;
+  background: #f2d1d4;
+}
+
+#dot3 {
+  top: 380px;
+  left: 6.1%;
+  background: #f2d1d4;
+}
+
+#dot4 {
+  top: 380px;
+  left: 72.8%;
+  background: #f2d1d4;
+}
+
+#dot5 {
+  top: 570px;
+  left: 66%;
+  background: #f2d1d4;
+}
+
+#dot6 {
+  top: 90px;
+  left: 79.5%;
+  background: #f2d1d4;
+}
+
+#dot7 {
+  top: 476px;
+  left: 92.7%;
+  background: #f2d1d4;
+}
+
+#dot8 {
+  top: 668px;
+  left: 26.2%;
+  background: #f2d1d4;
+}
+
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  position: fixed;
+}
+
+#empty {
+  height: 16000px;
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+
+
+
+
+@media all and (max-width:1300px) {
+ #preptime {
+  font-size: 1em;
   }
-);
-
-
-
-
-
-//initial states of fruits 
-	var selectedFruits= [];
-	var watermelonClicked = false;
-	var bananaClicked= false;
-	var appleClicked= false;
-	var orangeClicked= false;
-	var strawberryClicked= false;
-	var mangoClicked= false;
-	var pineappleClicked= false;
-	var peachClicked= false;
-
-	//hiding the recipe section initilly
-	$('#recipes2').hide();
-	//trying to hide scrolling
-	$('html').css('overflow', 'hidden');
-
-
-	//scrolling header
-	var $head = $( '#ha-header' );
-	$( '.ha-waypoint' ).each( function(i) {
-		var $el = $( this ),
-		animClassDown = $el.data( 'animateDown' ),
-		animClassUp = $el.data( 'animateUp' );
-
-		$el.waypoint( function( direction ) {
-			if( direction === 'down' && animClassDown ) {
-				$head.attr('class', 'ha-header ' + animClassDown);
-			}
-			else if( direction === 'up' && animClassUp ){
-				$head.attr('class', 'ha-header ' + animClassUp);
-			}
-		}, { offset: '100%' } );
-	} );
-
-	//scrolling states and movements - parallax movements + fading from screen
-	$("#container").scroll(function (eventObject) {
-		var scrollTop = $(this).scrollTop();
-		// console.log("top: ", scrollTop);
-
-		$("#grid").css({
-			top: -scrollTop*0.4
-		});
-
-	    // $("#marble").css({
-	    //   top: -scrollTop*0.6
-	    // });
-
-	//scrolling header colour changes + dots 
-
-    if ((scrollTop-$(window).scrollTop())>80) { 
-        $('header').css({"color":"#efafca"});
-    } else {
-    	$('header').css({"color":"#1d58ff"});
-    }
-
-    if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot1').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot1').css({"background":"#f2d1d4"});
-    }
-
-     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot2').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot2').css({"background":"#f2d1d4"});
-    }
-
-     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot3').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot3').css({"background":"#f2d1d4"});
-    }
-
-     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot4').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot4').css({"background":"#f2d1d4"});
-    }
-
-     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot5').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot5').css({"background":"#f2d1d4"});
-    }
-
-     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot6').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot6').css({"background":"#f2d1d4"});
-    }
-
-     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot7').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot7').css({"background":"#f2d1d4"});
-    }
-
-     if ((scrollTop-$(window).scrollTop())>80) { 
-        $('#dot8').css({"background":"#1d58ff"});
-    } else {
-    	$('#dot8').css({"background":"#f2d1d4"});
-    }
-	
-
-	//scrolling dots
-		$("#dot1").css({
-		top: +scrollTop*0.1 + 190
-		});
-
-		$("#dot2").css({
-		top: +scrollTop*0.2 + 280
-		});
-
-		$("#dot3").css({
-		top: -scrollTop*0.4 + 380
-		});
-
-		$("#dot4").css({
-		top: +scrollTop*0.1 + 387
-		});
-
-		$("#dot5").css({
-		top: -scrollTop*0.3 + 570
-		});
-
-		$("#dot6").css({
-		top: +scrollTop*0.6 + 90
-		});
-
-		$("#dot7").css({
-		top: -scrollTop*0.3 + 476
-		});
-
-		$("#dot8").css({
-		top: -scrollTop*0.6 + 668
-		});
-
-	if ((scrollTop-$(window).scrollTop())>720) {
-		$(".circle").stop().fadeTo(100,0);
-	} else {
-		$(".circle").stop().fadeTo('fast',10);
-	}
-
-	//if statement including media queries
-
-	if (mb.matches) { 
-	//scrolling fruits fading from screen
-	//do this if window width is at least 640px
-	
-			if (mq.matches) {
-				//do this if window is more than 1610px
-
-			$("#watermelon").css({
-			top: -scrollTop*0.2 + 200
-			});
-
-			$("#banana").css({
-			top: -scrollTop*0.35 + 200
-			});
-
-			$("#apple").css({
-			top: -scrollTop*0.2 + 200
-			});
-
-			$("#orange").css({
-			top: -scrollTop*0.35 + 200
-			});
-
-			$("#strawberry").css({
-			top: +scrollTop*0.2 + 390
-			});
-
-			$("#mango").css({
-			top: +scrollTop*0.35 + 390
-			});
-
-			$("#pineapple").css({
-			top: +scrollTop*0.2 + 390
-			})
-
-			$("#peach").css({
-			top: +scrollTop*0.35 + 390
-			});
-
-		if ((scrollTop-$(window).scrollTop())>650) {
-		$("#watermelon").stop().fadeTo(100,0);
-		} else {
-		$("#watermelon").stop().fadeTo('fast',10);
-	}
-	
-		}
-	else {
-
-		// otherwise if window width is less than 640px (mobile) do this:
-		// if(!localStorage["alertdisplayed"]) {
-  //   	alert("For full interactivity this website is best displayed on desktop")
-  //   	localStorage["alertdisplayed"] = true
-		// }
-
-
-		$("#watermelon").css({
-			top: -scrollTop*0.6 + 80
-			});
-
-		$("#banana").css({
-			top: -scrollTop*0.6 + 80
-			});
-
-		$("#apple").css({
-			top: -scrollTop*0.92 + 200
-			});
-
-		$("#orange").css({
-			top: -scrollTop*1.5 + 200
-			});
-
-		$("#strawberry").css({
-			top: +scrollTop*0.8 + 320
-			});
-
-		$("#mango").css({
-			top: +scrollTop*1.35 + 320
-			});
-
-		$("#pineapple").css({
-			top: +scrollTop*0.3 + 440
-			})
-
-		$("#peach").css({
-			top: +scrollTop*0.9 + 440
-			});
-
-		//dots movement on mobile 
-		$("#dot1").css({
-		top: +scrollTop*0.1 + 190
-		});
-
-		$("#dot2").css({
-		top: +scrollTop*0.8 + 280
-		});
-
-		$("#dot3").css({
-		top: -scrollTop*0.4 + 380
-		});
-
-		$("#dot4").css({
-		top: +scrollTop*0.6 + 387
-		});
-
-		$("#dot5").css({
-		top: -scrollTop*0.7 + 570
-		});
-
-		$("#dot6").css({
-		top: +scrollTop*0.6 + 90
-		});
-
-		$("#dot7").css({
-		top: -scrollTop*1.5 + 476
-		});
-
-		$("#dot8").css({
-		top: -scrollTop*1.0 + 668
-		});
-
-
-	
-		}
-		}  else {
-			//do this if window is larger than 1610px
-
-		$("#watermelon").css({
-			top: -scrollTop*0.6 + 220
-			});
-
-		$("#banana").css({
-			top: -scrollTop*0.6 + 220
-			});
-
-		$("#apple").css({
-			top: -scrollTop*0.92 + 220
-			});
-
-		$("#orange").css({
-			top: -scrollTop*1.5 + 220
-			});
-
-		$("#strawberry").css({
-			top: +scrollTop*0.8 + 450
-			});
-
-		$("#mango").css({
-			top: +scrollTop*1.35 + 450
-			});
-
-		$("#pineapple").css({
-			top: +scrollTop*0.3 + 450
-			})
-
-		$("#peach").css({
-			top: +scrollTop*0.9 + 450
-			});
-
-		}
-
-
-	//fading from screen
-
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#banana").stop().fadeTo(100,0);
-	} else {
-		$("#banana").stop().fadeTo('fast',10);
-	}
-
-	
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#apple").stop().fadeTo(100,0);
-	} else {
-		$("#apple").stop().fadeTo('fast',10);
-	}
-
-	
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#orange").stop().fadeTo(100,0);
-	} else {
-		$("#orange").stop().fadeTo('fast',10);
-	}
-
-
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#strawberry").stop().fadeTo(100,0);
-	} else {
-		$("#strawberry").stop().fadeTo('fast',10);
-	}
-
-	
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#mango").stop().fadeTo(100,0);
-	} else {
-		$("#mango").stop().fadeTo('fast',10);
-	}
-
-
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#pineapple").stop().fadeTo(100,0);
-	} else {
-		$("#pineapple").stop().fadeTo('fast',10);
-	}
-
-
-	if ((scrollTop-$(window).scrollTop())>650) {
-		$("#peach").stop().fadeTo(100,0);
-	} else {
-		$("#peach").stop().fadeTo('fast',10);
-	}
-
-	});
-
-	//hovering states switching out images to sliced fruit and x out:
-	$(".x").hover(function() {
-		$(".x").attr('src','img/x-blue-02.png');
-	}, function () {
-		$(".x").attr('src','img/x-blue-01.png');
-	});
-
-	$("#watermelon").hover(function() {
-		$("#watermelon img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-09.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#watermelon img").attr('src', 'img/FEWD51_FinalProject_Fruits-01.png' );
-	});
-
-	$("#banana").hover(function() {
-		$("#banana img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-10.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#banana img").attr('src', 'img/FEWD51_FinalProject_Fruits-02.png' );
-	});
-
-	$("#apple").hover(function() {
-		$("#apple img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-11.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#apple img").attr('src', 'img/FEWD51_FinalProject_Fruits-03.png' );
-	});
-
-	$("#orange").hover(function() {
-		$("#orange img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-12.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#orange img").attr('src', 'img/FEWD51_FinalProject_Fruits-04.png' );
-	});
-
-	$("#strawberry").hover(function() {
-		$("#strawberry img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-13.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#strawberry img").attr('src', 'img/FEWD51_FinalProject_Fruits-05.png' );
-	});
-
-	$("#mango").hover(function() {
-		$("#mango img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-14.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#mango img").attr('src', 'img/FEWD51_FinalProject_Fruits-06.png' );
-	});
-
-	$("#pineapple").hover(function() {
-		$("#pineapple img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-15.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#pineapple img").attr('src', 'img/FEWD51_FinalProject_Fruits-07.png' );
-	});
-
-	$("#peach").hover(function() {
-		$("#peach img").attr('src', 'img/FEWD51_FinalProject_FruitsNewType-16.png' );
-		// 	console.log("showing new image");
-	}, function () {
-		$("#peach img").attr('src', 'img/FEWD51_FinalProject_Fruits-08.png' );
-	});
-
-	// var watermelonline = document.getElementById('myLine')
-	// var bananaline = document.getElementById('myLine2')
-	// var appleline = document.getElementById('myLine3')
-	// var orangeline = document.getElementById('myLine4')
-	// var strawberryline = document.getElementById('myLine5')
-	// var mangoline = document.getElementById('myLine6')
-	// var pineappleline = document.getElementById('myLine7')
-	// var peachline = document.getElementById('myLine8')
-
-//slicing fruit animation
-  var slice = function(fruit, line) {
-    fruit.mouseenter(function(){
-      var count = 0;
-      var interval = window.setInterval(function() {
-	line.setAttribute('y2', 20 + +line.getAttribute('y2'));
-	line.setAttribute('x2', 20 + +line.getAttribute('x2'));
-	if (count++ > 10)
-	  window.clearInterval(interval);
-      }, 30);
-    });
-
-    fruit.mouseleave(function(){
-      var count = 0;
-      var interval = window.setInterval(function() {
-	line.removeAttribute('y2', 20 + +line.removeAttribute('y2'));
-	line.removeAttribute('x2', 20 + +line.removeAttribute('x2'));
-	if (count++ > 10)
-	  window.clearInterval(interval);
-      }, 30);
-    });
-  };
-
-  slice( $("#watermelon"), document.getElementById('myLine'));
-  slice( $("#banana"), document.getElementById('myLine2'));
-  slice( $("#apple"), document.getElementById('myLine3'));
-  slice( $("#orange"), document.getElementById('myLine4'));
-  slice( $("#strawberry"), document.getElementById('myLine5'));
-  slice( $("#mango"), document.getElementById('myLine6'));
-  slice( $("#pineapple"), document.getElementById('myLine7'));
-  slice( $("#peach"), document.getElementById('myLine8'));
-
-
-  //clicking to select and deselect fruit 
-  var setup_clicked_fruit = function(fruit, clickedVariable) {
-  	fruit.click(function () {
-		if (clickedVariable == true) {
-			var fruit_image = fruit.children('img');
-			fruit_image.css("background", "");
-
-			var fruitIndex = selectedFruits.indexOf(fruit);
-			if (fruitIndex > -1) {
-				selectedFruits.splice(fruitIndex, 1);
-			}
-			clickedVariable = false;
-		} else {
-			event.preventDefault();
-			var fruit_image = fruit.children('img');
-			fruit_image.css("background", "#ffebee");
-			selectedFruits.push(fruit);
-			clickedVariable = true;
-		}	
-	});
-  };
-
-	setup_clicked_fruit($("#watermelon"), watermelonClicked);
-	setup_clicked_fruit($("#banana"), bananaClicked);
-	setup_clicked_fruit($("#apple"), appleClicked);
-	setup_clicked_fruit($("#orange"), orangeClicked);
-	setup_clicked_fruit($("#strawberry"), strawberryClicked);
-	setup_clicked_fruit($("#mango"), mangoClicked);
-	setup_clicked_fruit($("#pineapple"), pineappleClicked);
-	setup_clicked_fruit($("#peach"), peachClicked);
-
-	
-	 
-	// using the api and getting the recipes
-	$("#submitAPI").click(function() {
-
-		// scrolled=scrolled+1000;
-        
-		// 		$("#container").animate({
-		// 		        scrollTop:  scrolled
-		// 		   });
-
-		//showing recipe div
-		
-  		$( "#recipes2" ).show( "slow", function() {
-  		});
-
-  		// $( "#recipes2" ).show( "scale" );
-
-
-
-		//auto scroll on submit
-		console.log("scrolling to recipe");
-		// $("#container").animate({scrollTop: $("#recipes").[0].scrollHeight},1000);
-
-		$("#container").animate({scrollTop: $("#recipes").offset().top},2000);
-		// $("#container").animate({ scrollTop: $(document).height()-$(window).height() });
-		// $('#recipes').scrollTo(1000);
-         
-
-
-		//api stuff
-		var ajaxData = "_app_id=96f1576a&_app_key=fe8e5004e7f3420ecb7f22459277514f&allowedCourse[]=course^course-Beverages";
-		for (var i = 0; i < selectedFruits.length; i++) {
-			var ingredient = selectedFruits[i].attr('id');
-			ajaxData+= "&allowedIngredient[]="+ ingredient;
-		}
-		
-		var url = "https://api.yummly.com/v1/api/recipes";
-		$.ajax(url, {
-			dataType: "jsonp",
-			data: ajaxData,
-			success: function(yummlyData) {
-
-				// get yummly data here and write a section for the recipe to appear
-				console.log(yummlyData);
-
-				random_number = Math.floor(Math.random() * 10);
-				recipe_data = yummlyData['matches'][random_number];
-				number_of_matches= yummlyData.totalMatchCount;
-
-				console.log(number_of_matches);
-
-
-
-				if (number_of_matches==0) {
-
-							console.log("no matches");
-							$("#recipename").text("Sorry, no matches. Please try another selection.");
-							$("#ingredientstitle").hide();
-							$("#preptime").hide();
-							$("#rating").hide();
-							$("#directions").hide();
-							$("#ingredients").hide();
-						} else {
-
-
-				// get actual recipe
-				var ajaxData = "_app_id=96f1576a&_app_key=fe8e5004e7f3420ecb7f22459277514f";
-				var url = "https://api.yummly.com/v1/api/recipe/" + recipe_data['id'];
-				$.ajax(url, {
-					dataType: "jsonp",
-					data: ajaxData,
-					success: function(recipeData) {
-						console.log(recipeData);
-						// debugger;
-
-					
-
-						var name = recipeData.name
-						var ingredients = recipeData.ingredientLines
-						var preptime= recipeData.totalTime
-						var rating= recipeData.rating
-						var directions= recipeData.source.sourceRecipeUrl
-		
-					$("ul").empty();
-
-						//to make ingredients a string instead of list
-						// var ingredientsString = "";
-						// for (var i = 0; i < ingredients.length; i++) {
-						// 	ingredientsString += ingredients[i] + " ";
-						// }
-
-
-						
-
-
-
-						
-
-						
-				
-						
-						// display ingredientsString
-						// $("#ingredients").text(ingredientsString);
-						
-						$("#recipename").text(name);
-						$("#preptime").text("Prep Time:" + preptime);
-						$("#rating").text("Rating:" + rating + " out of 5");
-						$("#directions").text(directions);
-
-						//to display ingredients as a list
-						
-						ingredients.forEach(function (ingredients, index) {
-						console.log(ingredients);
-						$("#ingredients").append("<li>" + ingredients + "</li>");
-					});
-
-					}
-
-
-
-
-
-
-						// get all these from https://developer.yummly.com/documentation
-
-
-
-				});
-
-				$("#back").click(function() {
-
-					console.log('clicking');
-					$('#recipes2').hide();
-					// jQuery('#container').animate({scrollTop: 0}, duration);
-					$("#container").animate({scrollTop: $("#container").offset().top},1500);
-
-						
-				});
-
-				$(".x").click(function() {
-
-					console.log('clicking');
-					$('#recipes2').hide();
-					// jQuery('#container').animate({scrollTop: 0}, duration);
-					$("#container").animate({scrollTop: $("#container").offset().top},1500);
-
-						
-				});
-			}
-			}
-		});
-	});
-});
+ #rating {
+  font-size: 1em;
+ } 
+}
+
+@media all and (max-height:100px) {
+ #directions {
+  font-size: 0.8em;
+  }
+}
+
+@media all and (max-width:900px) {
+ #directions {
+  font-size: 0.5em;
+  }
+}
+
+/*resizes fruit so they are not overlapping when screen size changes
+*/
+
+@media all and (min-width:1200px) {
+  #submitAPI {
+    top: 80%;
+  }
+}
+
+@media all and (min-width:1610px) {
+  #watermelon {
+  top: 220px;
+  }
+
+  #banana {
+  top: 220px;
+  }
+
+  #apple {
+  top: 220px;
+  }
+
+  #orange {
+  top: 220px;
+  }
+
+  #strawberry {
+    top: 450px;
+  }
+  #mango {
+    top: 450px;
+  }
+  #pineapple {
+    top: 450px;
+  }
+  #peach {
+    top: 450px;
+  }
+  #submitAPI {
+    top: 85%;
+  }
+  #myLine {
+  stroke: #fca4e9;
+  stroke-width: 6px;
+}
+
+#myLine2 {
+  stroke: #f9b57d;
+  stroke-width: 6px;
+}
+
+#myLine3 {
+  stroke: #f9eb6b;
+  stroke-width: 6px;
+}
+
+#myLine4 {
+  stroke: #87f4a8;
+  stroke-width: 6px;
+}
+
+#myLine5 {
+  stroke: #97efe7;
+  stroke-width: 6px;
+}
+
+#myLine6 {
+  stroke: #f7a4a4;
+  stroke-width: 6px;
+}
+
+#myLine7 {
+  stroke: #92f4ba;
+  stroke-width: 6px;
+}
+
+#myLine8 {
+  stroke: #a2c3f9;
+  stroke-width: 6px;
+}
+  
+}
+
+/*optimizing for mobile sizing
+*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
+
+/*background stuff*/
+
+#container {
+  position: absolute;
+  width: 100%;
+  max-height: 1000px;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+ /* border: 3px solid #efafca;*/
+}
+
+#empty {
+  height: 100%;
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+#desktop-grid {
+  display: none;
+}
+
+#mobile-grid {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+}
+
+header {
+  font-family: 'Montserrat';
+  font-size: 0.8em;
+  letter-spacing: 1.5em;
+  z-index: 10000;
+  padding: 0.5%;
+  padding-left: 5%;
+  /*padding-left: 4%;*/
+  position: absolute;
+  color: #1d58ff;
+  background-color: #fff;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+#mobile {
+  display: block;
+  font-size: 1em;
+  letter-spacing: 0em;
+  text-align: left;
+ /* margin-right: 0%;
+  margin-top: 2px;
+  padding: 0.5%;
+  padding-left: 0%;
+  margin-left: 6%;*/
+  position: absolute;
+  top: 10%;
+  background-color: white;
+  z-index: 10000;
+  color: #1d58ff;
+  font-family: 'Montserrat';
+  /*padding-left: 5%;*/
+}
+
+#submitAPI {
+  width: 20%;
+  margin-left: 43%;
+  /*float:left;*/
+  top: 50%;
+  position: absolute;
+  background-color: #1d58ff;
+  border: 4px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px;
+  letter-spacing: 3px;
+  /*background-color: transparent;*/
+  z-index: 1000;
+}
+
+#submitAPI:hover {
+  color: white;
+  border: 4px solid #f2d1d4;
+  background-color: #f2d1d4;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  position: fixed;
+}
+
+
+#myLine {
+  stroke-width: 4px;
+}
+#myLine2 {
+  stroke-width: 4px;
+}
+#myLine3 {
+  stroke-width: 4px;
+}
+#myLine4 {
+  stroke-width: 4px;
+}
+#myLine5 {
+  stroke-width: 4px;
+}
+#myLine6 {
+  stroke-width: 4px;
+}
+#myLine7 {
+  stroke-width: 4px;
+}
+#myLine8 {
+  stroke-width: 4px;
+}
+
+#svg {
+  position: absolute;
+  width: 80%;
+}
+
+
+#watermelon {
+  top: 80px;
+  left: 8%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+  float: left;
+}
+    
+#banana {
+  top: 80px;
+  left: 50%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+  float: left;
+}
+
+#apple {
+  top: 200px;
+  left: 8%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+
+}
+
+#orange {
+  top: 200px;
+  left: 50%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+
+}
+
+#strawberry {
+  top: 320px;
+  left: 8%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+
+}
+
+#mango {
+  top: 320px;
+  left: 50%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+
+}
+
+#pineapple {
+  top: 440px;
+  left: 8%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+  z-index: 10000;
+
+}
+
+#peach {
+  top: 440px;
+  left: 50%;
+  width: 38%;
+  height: 38%;
+  position: fixed;
+  z-index: 10000;
+
+}
+
+.x {
+/*display: none;*/
+width: 9%;
+position: absolute;
+margin-left: 91%;
+}
+
+#recipes2 {
+  width: 90%;
+  margin-left: 9%;
+  margin-right: 0%;
+  position: fixed;
+  top: 20%;
+  background-color: transparent;
+  z-index: 5000;
+ /* overflow: scroll;*/
+}
+
+
+
+#filler {
+  /*border: 3px solid black;*/
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 1em;
+  margin: 0;
+  padding: 2%;
+  color: #efafca;
+  cursor: default;
+  /*height: 7%;*/
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: transparent;
+}
+
+#recipename {
+  border: 2.5px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 5%;
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#preptime {
+  border-left: 2px solid #1d58ff;
+  border-right: 2px solid #1d58ff;
+  border-bottom: 2px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 5%; 
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  width: 50%;
+  float: left;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  white-space: nowrap;
+}
+
+#rating {
+  border-right: 2px solid #1d58ff;
+  border-bottom: 2px solid #1d58ff;
+  margin-bottom: 40%;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 5%;
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  width: 50%;
+  float: left;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#ingredientstitle {
+  border-left: 2px solid #1d58ff;
+  border-right: 2px solid #1d58ff;
+  border-bottom: 2px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  background-color: #fff;
+  margin: 0;
+  padding: 1%;
+  padding-top: 1%;
+  padding-left: 5%;
+  color: #efafca;
+  cursor: default;
+  clear: both;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#ingredients {
+  border-left: 2px solid #1d58ff;
+  border-right: 2px solid #1d58ff;
+  border-bottom: 2px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  max-height: 200px;
+  margin: 0;
+  padding: 2%;
+  background-color: #fff;
+  /*padding-left: 6.5%;*/
+  color: #efafca;
+  cursor: default;
+  padding-left: 0%;
+  /*height: 100%;*/
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: scroll;
+}
+
+li {
+  padding-left: 0%;
+  margin-left: 6%;
+}
+
+
+#directions {
+  border-left: 2px solid #1d58ff;
+  border-right: 2px solid #1d58ff;
+  border-bottom: 2px solid #1d58ff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  margin: 0;
+  padding: 2%;
+  padding-left: 5%;
+  color: #efafca;
+  background-color: #fff;
+  cursor: default;
+  /*height: 100%;*/
+  z-index: 1;
+  word-wrap: break-word;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}  
+
+}
