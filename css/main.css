@@ -742,6 +742,10 @@ li {
   max-width: 100%;
 }
 
+.opl {
+  display: none;
+}
+
 header {
   font-family: 'Montserrat';
   font-size: 0.8em;
