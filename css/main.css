@@ -23,8 +23,8 @@ background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-right.p
 position:fixed;
 top:30px;
 left:95%;
-z-index:99999;
-float: right;
+z-index:999990;
+display: block;
 }
 
 .csswinner a {
