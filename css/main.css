@@ -6,7 +6,7 @@
 
 /*OPL ribbon*/
 .opl {
-position:fixed;
+position:relative;
 top:20px;
 left:95%;
 z-index:99999;
@@ -19,8 +19,9 @@ display:block;
 background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-right.png') no-repeat;
 }
 
+/*CSS Winner Ribbon*/
 .csswinner {
-position:fixed;
+position:relative;
 top:70px;
 left:95.5%;
 z-index:999990;
