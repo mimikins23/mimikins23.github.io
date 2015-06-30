@@ -169,6 +169,18 @@ var docWidth = document.documentElement.offsetWidth;
 	if (mb.matches) { 
 	//scrolling fruits fading from screen
 	//do this if window width is at least 640px (media queries start here)
+		//award ribbons
+	if ((scrollTop-$(window).scrollTop())>100) {
+		$(".opl").stop().fadeTo(100,0);
+	} else {
+		$(".opl").stop().fadeTo('fast',10);
+	}
+	
+	if ((scrollTop-$(window).scrollTop())>100) {
+		$(".csswinner").stop().fadeTo(100,0);
+	} else {
+		$(".csswinner").stop().fadeTo('fast',10);
+	}
 	
 			if (mq.matches) {
 				//do this if window is more than 1610px
@@ -332,19 +344,6 @@ var docWidth = document.documentElement.offsetWidth;
 
 
 	//fading from screen
-	
-	//award ribbons
-	if ((scrollTop-$(window).scrollTop())>100) {
-		$(".opl").stop().fadeTo(100,0);
-	} else {
-		$(".opl").stop().fadeTo('fast',10);
-	}
-	
-	if ((scrollTop-$(window).scrollTop())>100) {
-		$(".csswinner").stop().fadeTo(100,0);
-	} else {
-		$(".csswinner").stop().fadeTo('fast',10);
-	}
 
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#banana").stop().fadeTo(100,0);
