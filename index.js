@@ -329,10 +329,17 @@ var docWidth = document.documentElement.offsetWidth;
 
 	//fading from screen
 	
+	//award ribbons
 	if ((scrollTop-$(window).scrollTop())>100) {
 		$(".opl").stop().fadeTo(100,0);
 	} else {
 		$(".opl").stop().fadeTo('fast',10);
+	}
+	
+	if ((scrollTop-$(window).scrollTop())>100) {
+		$(".csswinner").stop().fadeTo(100,0);
+	} else {
+		$(".csswinner").stop().fadeTo('fast',10);
 	}
 
 	if ((scrollTop-$(window).scrollTop())>650) {
