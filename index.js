@@ -168,7 +168,7 @@ var docWidth = document.documentElement.offsetWidth;
 
 	if (mb.matches) { 
 	//scrolling fruits fading from screen
-	//do this if window width is at least 640px
+	//do this if window width is at least 640px (media queries start here)
 	
 			if (mq.matches) {
 				//do this if window is more than 1610px
@@ -219,6 +219,10 @@ var docWidth = document.documentElement.offsetWidth;
   //   	alert("For full interactivity this website is best displayed on desktop")
   //   	localStorage["alertdisplayed"] = true
 		// }
+		
+		//hiding ribbons
+		$('.csswinner').hide();
+		$('.opl').hide();
 
 
 		$("#watermelon").css({
