@@ -635,7 +635,7 @@ li {
   }
 }
 
-/*resizes fruit so they are not overlapping when screen size changes
+/*resizes fruit so they are not overlapping when screen size changes when browser gets bigger
 */
 
 @media all and (min-width:1200px) {
@@ -751,6 +751,10 @@ li {
 }
 
 .opl {
+  display: none;
+}
+
+.csswinner {
   display: none;
 }
 
