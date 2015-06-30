@@ -1,17 +1,5 @@
 $(function () {
 
-//google analytics
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64561716-1', 'auto');
-  ga('send', 'pageview');
-
-
-
-
 //code for javascript media queries
 var mq = window.matchMedia( "(min-width: 640px)" );
 var mb = window.matchMedia( "(max-width: 1610px)" );
