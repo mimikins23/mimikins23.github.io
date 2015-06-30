@@ -24,7 +24,7 @@ position:fixed;
 top:30px;
 left:95%;
 z-index:99999;
-float: left;
+float: right;
 }
 
 .csswinner a {
