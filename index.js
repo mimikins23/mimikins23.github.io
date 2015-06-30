@@ -328,6 +328,12 @@ var docWidth = document.documentElement.offsetWidth;
 
 
 	//fading from screen
+	
+	if ((scrollTop-$(window).scrollTop())>100) {
+		$(".opl").stop().fadeTo(100,0);
+	} else {
+		$(".opl").stop().fadeTo('fast',10);
+	}
 
 	if ((scrollTop-$(window).scrollTop())>650) {
 		$("#banana").stop().fadeTo(100,0);
