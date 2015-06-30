@@ -19,7 +19,7 @@ display:block;
 background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-right.png') no-repeat;
 }
 
-.csswinner img {
+.csswinner {
 position:fixed;
 top:30px;
 left:95%;
