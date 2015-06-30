@@ -654,7 +654,7 @@ li {
 }
 
 @media all and (min-width:1600px) {
-    .csswinner {
+  .csswinner {
     left:96%;
   }
   
@@ -665,7 +665,7 @@ li {
 }
 
 @media all and (min-width:1800px) {
-    .csswinner {
+  .csswinner {
     left:96.5%;
   }
   
@@ -750,6 +750,15 @@ li {
   
 }
 
+@media all and (max-width:768px)
+.opl {
+  display: none;
+}
+
+.csswinner {
+  display: none;
+}
+
 /*optimizing for mobile sizing
 */
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
@@ -780,14 +789,6 @@ li {
   display: block;
   height: 100%;
   max-width: 100%;
-}
-
-.opl {
-  display: none;
-}
-
-.csswinner {
-  display: none;
 }
 
 header {
