@@ -19,6 +19,14 @@ display:block;
 background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-right.png') no-repeat;
 }
 
+.csswinner img {
+position:fixed;
+top:30px;
+left:95%;
+z-index:99999;
+}
+
+
 /*getting rid of the horizontal scrolling*/
 
 html {
