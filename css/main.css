@@ -7,7 +7,7 @@
 /*OPL ribbon*/
 .opl {
 position:fixed;
-top:50px;
+top:40px;
 left:95%;
 z-index:99999;
 }
