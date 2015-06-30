@@ -664,6 +664,17 @@ li {
   
 }
 
+@media all and (min-width:1800px) {
+    .csswinner {
+    left:97%;
+  }
+  
+  .opl {
+    left: 96.5%;
+  }
+  
+}
+
 @media all and (min-width:1610px) {
   
   #watermelon {
