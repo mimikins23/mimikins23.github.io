@@ -750,14 +750,6 @@ li {
   
 }
 
-@media all and (max-width:768px)
-.opl {
-  display: none;
-}
-
-.csswinner {
-  display: none;
-}
 
 /*optimizing for mobile sizing
 */
@@ -789,6 +781,13 @@ li {
   display: block;
   height: 100%;
   max-width: 100%;
+}
+
+.opl {
+  display: none;
+}
+.csswinner {
+  display: none;
 }
 
 header {
