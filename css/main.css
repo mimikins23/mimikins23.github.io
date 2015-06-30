@@ -7,7 +7,7 @@
 /*OPL ribbon*/
 .opl {
 position:fixed;
-top:30px;
+top:50px;
 left:95%;
 z-index:99999;
 }
@@ -22,7 +22,7 @@ background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-right.p
 .csswinner {
 position:fixed;
 top:30px;
-left:95%;
+left:97%;
 z-index:999990;
 float: right;
 }
